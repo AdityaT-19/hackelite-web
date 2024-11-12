@@ -1,11 +1,9 @@
-import Hero from "./components/hero";
-import Navbar from "./components/Navbar";
+import MainPage from "./pages/MainPage";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
+      <MainPage />
     </>
   );
 }
