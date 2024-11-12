@@ -2,7 +2,18 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "primary-green": "#58ff16",
+        "stroke-green": "#4a9d36",
+        "purple-heading": "#9d50ff",
+      },
+      fontFamily: {
+        hackalite: "Rubik Iso",
+        countdown: "Press Start 2P",
+        subhackalite: "Orbitron",
+      },
+    },
   },
   plugins: [],
 };
