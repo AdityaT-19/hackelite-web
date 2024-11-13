@@ -5,7 +5,6 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import { FiMousePointer } from "react-icons/fi";
 
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
@@ -53,14 +52,14 @@ const Hover3D = ({ children }) => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-full w-full rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-[25rem] w-screen sm:w-96"
     >
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
+        className="absolute inset-4 grid place-content-center rounded-xl"
       >
         {children}
       </div>

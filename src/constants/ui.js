@@ -11,3 +11,24 @@ export const navLink2 = [
   { name: "FAQ", section: "#faq" },
   { name: "Contact us", section: "#contact-us" },
 ];
+
+export const words = [
+  {
+    text: "Fuel ",
+  },
+  {
+    text: "Your ",
+  },
+  {
+    text: "Code ",
+  },
+  {
+    text: "Ignite ",
+  },
+  {
+    text: "the ",
+  },
+  {
+    text: "Future",
+  },
+];
