@@ -6,8 +6,8 @@ import {
   useSpring,
 } from "framer-motion";
 
-const ROTATION_RANGE = 32.5;
-const HALF_ROTATION_RANGE = 32.5 / 2;
+const ROTATION_RANGE = 22.5;
+const HALF_ROTATION_RANGE = 22.5 / 2;
 
 const Hover3D = ({ children }) => {
   const ref = useRef(null);
@@ -52,7 +52,7 @@ const Hover3D = ({ children }) => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-[25rem] w-screen sm:w-96"
+      className="relative h-64 w-64 sm:h-72 sm:w-72"
     >
       <div
         style={{

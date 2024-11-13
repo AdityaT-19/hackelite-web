@@ -11,24 +11,24 @@ function Hero() {
       style={{ minHeight: "calc(100vh - 3.5rem)" }}
     >
       <div className="flex items-center gap-16 lg:gap-24 flex-col p-4">
-        <Hover3D>
-          <div className="flex items-center justify-center flex-col">
+        <div className="flex items-center justify-center flex-col">
+          <Hover3D>
             <img
               src="/logo.png"
               alt="logo"
               className="h-64 w-64 sm:h-72 sm:w-72"
             />
-            <h1 className="font-hackalite text-white text-4xl md:text-6xl lg:text-8xl gradient-text">{`<HACKALITE>`}</h1>
-            <div className="flex justify-between w-full sm:w-[60vw] max-lg:flex-col p-2 gap-2 max-xl:items-center">
-              <h2 className="text-white text-sm sm:text-xl font-subhackalite flex-1 flex">
-                <TypewriterEffect words={words} />
-              </h2>
-              <p className="text-purple-heading text-xl font-bold">
-                1st Dec 2024
-              </p>
-            </div>
+          </Hover3D>
+          <h1 className="font-hackalite font-semibold text-white text-4xl md:text-6xl lg:text-8xl gradient-text">{`<HACKALITE>`}</h1>
+          <div className="flex justify-between w-full sm:w-[60vw] max-lg:flex-col p-2 gap-2 max-xl:items-center">
+            <h2 className="text-white text-sm sm:text-xl font-subhackalite flex-1 flex">
+              <TypewriterEffect words={words} />
+            </h2>
+            <p className="text-purple-heading text-xl font-bold">
+              1st Dec 2024
+            </p>
           </div>
-        </Hover3D>
+        </div>
         <button
           className="bg-[#b880df] h-16 sm:w-96 w-64 text-xl sm:text-3xl font-semibold text-white"
           style={{
