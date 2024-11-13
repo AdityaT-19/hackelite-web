@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+       "title": " WHY PARTICIPATE IN HACKELITE'24 ?",
+      "image": "/about/logo.png",
+      "search_url": "",
+      "content":  " HackElite '24 is a 24-hour National Level Hackathon organized by the Developer Student Club (DSC) and Linux Campus Club (LCC) at Sri Jayachamarajendra College of Engineering. The event aims to bring together students, developers, and techenthusiasts from across the country to collaborate, innovate, and solve real-world challenges. Participants will work in teams, leveraging cutting-edge technologies to create innovative solutions.          It's not just an opportunity to showcase technical skills; it's a chance to network, learn, and have a memorable time with like-minded individuals.🤝"
+    },
+    {
+      "id": 2,
+      "title": "ABOUT JSS MAHAVIDYAPEETHA",
+      "image":  "/about/JSS-mahavidhyapita.jpg",
+      "search_url": "https://jssonline.org/",
+      "content": " JSS Mahavidyapeetha is a renowned educational institution located in Mysore, Karnataka. It is a deemed university, established in 2008 under Section 3 of the UGC Act 1956. The Peetha is part of a larger educational network, comprising various institutions.It is a deemed university with a rich history of contributions to education, social service, and spirituality. The institution’s Publishing Department plays an important role in promoting literature and knowledge sharing"
+    },
+    {
+      "id": 3,
+      "title": "ABOUT JSSSTU",
+      "image": "/about/sjce.png",
+      "search_url": "https://jssstuniv.in/#/",
+      "content": " JSS Science and Technology University (JSS STU) is built on a strong reputation of SJCE, Mysuru, and is passionately committed for providing education in Science, Technology, Engineering & Mathematics (STEM) and Management. JSS STU plays a key role in providing high-quality skilled manpower in the fields of Science, Engineering & Technology and Management to transform society through research and innovation"
+    },
+
+  {
+    "id" : 3,
+    "title": "DEPARTMENT OF CSE",
+   "image" : "/about/jssstu.png",
+   "search_url": "https://jssstuniv.in/#/Coursedetail?courseid=8",
+    "content" : " Our vision is to establish a globally recognized academic center of excellence in Computer Science & Engineering, focused on teaching, learning, research, and innovation. We aim to provide high-quality education grounded in fundamental principles, while continuously updating curriculum and teaching methods to enhance the educational experience. Through active research and collaborations with leading institutions and industries. Additionally, we are committed to fostering innovation and entrepreneurship, contributing positively to society."
+  }
+  ]
+  

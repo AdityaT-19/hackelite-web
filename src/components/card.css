@@ -1,0 +1,162 @@
+/* src/components/Card.css */
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #58ff16;
+  border-radius: 0px 0px 100px 0px;
+  padding: 16px;
+  margin: 16px;
+  max-width: 100%;
+  width: 100%;
+  transition: all 0.3s ease;
+  background-color: #58ff1622;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 100vh; /* Ensure the container takes up the full viewport height */
+}
+
+.image-container,
+.content-container {
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.content-container {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-align: justify;
+  padding: 20px;
+}
+
+.title-container {
+  font-size: 40px;
+  color: #b880ff;
+  margin-bottom: 10px;
+}
+.know{
+  border: 1px solid #58ff16;
+  margin: 10px 0px 0px 0px ;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: #b880ff;
+
+}
+.know:hover {
+  background-color: #45cc12; /* Darker green background on hover */
+  color: #fff; /* Keep text white */
+  transform: scale(1.05); /* Slightly scale the button on hover */
+}
+
+.image-container {
+  margin: 10px;
+  border: 4px solid black;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Responsive Styles */
+
+/* For Mobile Devices (Portrait) - max-width: 767px */
+@media (max-width: 767px) {
+  .card-container {
+    padding: 10px;
+  }
+
+  .image-container {
+    max-width: 300px;
+  }
+
+  .content-container {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+
+  .title-container {
+    font-size: 1.6rem;
+  }
+}
+
+/* For Tablets (Portrait) and Smaller Screens - max-width: 1023px */
+@media (max-width: 1023px) {
+  .card-container {
+    padding: 15px;
+  }
+
+  .image-container {
+    max-width: 400px;
+  }
+
+  .content-container {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .title-container {
+    font-size: 1.7rem;
+  }
+}
+
+/* For Tablets (Landscape) and Small Desktops - max-width: 1279px */
+@media (max-width: 1279px) {
+  .card-container {
+    padding: 20px;
+  }
+
+  .image-container {
+    max-width: 400px;
+  }
+
+  .content-container {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .title-container {
+    font-size: 1.8rem;
+  }
+}
+
+/* For Larger Screens (Desktops) - min-width: 1280px */
+@media (min-width: 1280px) {
+  .card-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1300px;
+    min-height: auto; /* Reset the min-height for larger screens */
+  }
+
+  .image-container,
+  .content-container {
+    margin: 20px;
+  }
+
+  .image-container {
+    max-width: 500px;
+  }
+
+  .content-container {
+    font-size: 1.6rem;
+    padding: 20px;
+  }
+
+  .title-container {
+    font-size: 1.9rem;
+  }
+}
