@@ -4,6 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.clip-diagonal{
+  clip-path: polygon(0% 0%, 5% 0%, 100% 55%, 100% 100%, 0% 100%); 
+}
+.bg-faq{
+    background-color: rgba(88, 255, 22, 0.22);
+}
+.bg-footer{
+    background-color: rgba(88, 255, 22, 0.22);
+}
+.outside {
+  position: relative;
+  width: 100px;
+  height: 50px; 
+  clip-path:polygon(0% 0%, 55% 0%, 100% 86%, 100% 100%, 0% 100%);
+}
+.inside {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 4px;
+  bottom: 4px;
+  color: #C1A4F1;
+  text-align: center;
+  clip-path: polygon(0% 0%, 65% 0%, 100% 55%, 100% 100%, 0% 100%);
+}
+
 /* In your global CSS file */
 @layer utilities {
   .clip-left {
