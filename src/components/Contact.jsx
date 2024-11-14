@@ -27,9 +27,15 @@ function Footer() {
       </div>
       <div className='flex sm:w-6/12 w-5/12 gap-10 items-center  justify-center sm:justify-around'>  
                 <div className='flex min-h-full text-3xl cursor-pointer text-purple-500  justify-center gap-4 items-center flex-col'>
-                    <a target="_blank" href="https://www.instagram.com/reel/DCRWptPylSa/?igsh=dm00YnR1OWdjeTNz"> <FaInstagram></FaInstagram> </a>
-                    <a target="_blank" href="https://www.linkedin.com/company/hackelite-24-jssstu/"> <FaLinkedin></FaLinkedin> </a>
-                    <a target="_blank" href=""> <FaGithub></FaGithub> </a>
+                  <div className='flex gap-2'>
+                    <a className='hover:scale-125' target="_blank" href="https://www.instagram.com/reel/DCRWptPylSa/?igsh=dm00YnR1OWdjeTNz"> <FaInstagram></FaInstagram></a>
+                    <span className='xl:block hidden text-lg'>hackelite_24</span> 
+                  </div>
+                  <div className='flex gap-2'>
+                    <a className='hover:scale-125' target="_blank" href="https://www.linkedin.com/company/hackelite-24-jssstu/"> <FaLinkedin></FaLinkedin> </a>
+                    <span className='xl:block hidden text-lg'>Haclite'24 JSSSTU</span> 
+                  </div>
+                    <a className='hover:scale-125' target="_blank" href=""> <FaGithub></FaGithub> </a>
                 </div>
                 <div className='min-h-full font-bold text-lg md:flex hidden justify-center gap-5    flex-col'>
                     <div>
