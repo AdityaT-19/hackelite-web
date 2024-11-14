@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 4px solid #58ff16;
+  border: 2px solid #58ff16;
   border-radius: 0px 0px 100px 0px;
   padding: 16px;
   margin: 16px;
@@ -45,23 +45,17 @@
   margin-bottom: 10px;
 }
 .know{
-  border: 1px solid #58ff16;
-  margin: 10px 0px 0px 0px ;
-  border-radius: 5px;
-  padding: 3px;
-  background-color: #b880ff;
+ margin: 4px;
 
 }
-.know:hover {
-  background-color: #45cc12; /* Darker green background on hover */
-  color: #fff; /* Keep text white */
-  transform: scale(1.05); /* Slightly scale the button on hover */
-}
+
 
 .image-container {
+  position: relative;
   margin: 10px;
-  border: 4px solid black;
+ 
   max-width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

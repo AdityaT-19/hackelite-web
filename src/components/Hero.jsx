@@ -1,8 +1,8 @@
 import { FaDiscord, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
+import { words } from "../constants/ui";
 import Hover3D from "./Hover3D";
 import { TypewriterEffect } from "./typewriter-effect";
-import { words } from "../constants/ui";
 
 function Hero() {
   return (
@@ -19,7 +19,7 @@ function Hero() {
               className="h-64 w-64 sm:h-72 sm:w-72"
             />
           </Hover3D>
-          <h1 className="font-hackalite font-semibold text-white text-4xl md:text-6xl lg:text-8xl gradient-text">{`<HACKALITE>`}</h1>
+          <h1 className="font-hackalite font-semibold text-white text-4xl md:text-6xl lg:text-8xl gradient-text">{`<HACKELITE>`}</h1>
           <div className="flex justify-between w-full sm:w-[60vw] max-lg:flex-col p-2 gap-2 max-xl:items-center">
             <h2 className="text-white text-sm sm:text-xl font-subhackalite flex-1 flex">
               <TypewriterEffect words={words} />
