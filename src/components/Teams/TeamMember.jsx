@@ -18,7 +18,7 @@ const TeamMember = ({ name, role, image }) => {
           }}
         />
         
-        {/* Slanted Bottom Border */}
+        {/* Slanted Bottom Border Trying */}
         <div
           className="absolute bottom-0 left-0 right-0 h-[10px] bg-[#38A300]"  // Apply bottom border
           style={{
@@ -26,8 +26,6 @@ const TeamMember = ({ name, role, image }) => {
           }}
         />
       </div>
-
-      {/* Image container */}
       <div className="absolute top-0 left-1/3 -translate-x-1/2 w-[240px] h-[240px] overflow-hidden">
         <div className="relative w-full h-full">
           <img
@@ -35,12 +33,12 @@ const TeamMember = ({ name, role, image }) => {
             alt={name}
             className="w-full h-full object-cover"
           />
-          {/* Green overlay for the image */}
+
           <div className="absolute inset-0 bg-[#1a4d1a] mix-blend-color opacity-40" />
         </div>
       </div>
 
-      {/* Text content */}
+
       <div className="absolute bottom-12 left-8 right-8 p-4">
         <h3
           className="text-[32px] text-white mb-2 font-normal tracking-wide whitespace-nowrap overflow-visible"

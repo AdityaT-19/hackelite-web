@@ -8,9 +8,9 @@
   animation: glow 2s infinite;
 }
 
-/* Set background to solid black */
+
 .grid-background, .bg-diamond-pattern {
-  background-color: #000; /* Solid black background */
+  background-color: #000; 
 }
 
 .card-hover {
@@ -90,11 +90,10 @@
   transform: scale(1.05);
 }
 
-/* Ensures the dots are positioned at the left */
 .slick-dots {
   position: absolute;
-  left: 0px;  /* Keeps it to the left */
-  bottom: 10px; /* Adjusts the positioning vertically */
+  left: 0px;  
+  bottom: 10px; 
   padding: 0;
   list-style: none;
 }
@@ -108,15 +107,15 @@
 }
 
 .slick-dots li.slick-active button {
-  background-color: #58FF16; /* Active dot color */
+  background-color: #58FF16; 
 }
-/* Slider Styles */
+
 .slick-slider {
   position: relative;
   margin-bottom: 3rem;
 }
 
-/* Navigation Dots */
+
 .slick-dots {
   position: absolute;
   left: 0;
@@ -149,7 +148,7 @@
   transform: scale(1.2);
 }
 
-/* Navigation Arrows */
+
 .slick-prev,
 .slick-next {
   position: absolute;
@@ -168,13 +167,13 @@
   background-color: rgba(88, 255, 22, 0.4);
 }
 
-/* Background Styles */
+
 .grid-background,
 .bg-diamond-pattern {
   background-color: #000;
 }
 
-/* Custom Grid Pattern */
+
 .bg-diamond-pattern::before {
   content: '';
   position: absolute;
@@ -188,14 +187,13 @@
 
 .team-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* Two cards per row */
-  gap: 20px;  /* Space between cards */
+  grid-template-columns: repeat(2, 1fr);  
+  gap: 20px; 
   margin: 0 auto;
   padding: 20px;
-  max-width: 900px;  /* You can adjust this based on the screen size */
+  max-width: 900px; 
 }
 
-/* Slanted bottom border */
 .team-member-card .slanted-bottom-border {
   position: absolute;
   bottom: 0;
@@ -206,7 +204,6 @@
   clip-path: polygon(0% 15%, 40% 0%, 100% 0%, 100% 85%, 60% 100%, 0% 100%);
 }
 
-/* Right border */
 .team-member-card .right-border {
   position: absolute;
   top: 0;
@@ -216,7 +213,7 @@
   background-color: #38A300;
 }
 
-/* Slanted card background with border */
+/* Slanted card background with border trying */
 .team-member-card .card-background {
   position: absolute;
   bottom: 0;

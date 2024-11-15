@@ -97,9 +97,9 @@ const teamData = {
 
 const AnimatedBackground = () => (
   <div className="fixed inset-0 -z-10 overflow-hidden bg-black">
-    {/* Diamond grid background pattern */}
+    
     <div className="absolute inset-0 bg-diamond-pattern opacity-10" />
-    {/* Vertical lines */}
+    
     <div className="absolute inset-0">
       {[...Array(6)].map((_, i) => (
         <div
@@ -112,7 +112,7 @@ const AnimatedBackground = () => (
         />
       ))}
     </div>
-    {/* Horizontal lines */}
+    
     <div className="absolute inset-0">
       {[...Array(6)].map((_, i) => (
         <div
@@ -132,18 +132,18 @@ const Teams = () => {
   const [activeTab, setActiveTab] = useState('Core');
   const tabs = ['Core', 'Technical', 'Creative', 'Sponsorship', 'Publicity', 'Outreach'];
 
-  // Slider settings
+
   const sliderSettings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 2, // Show 2 cards per row
+    slidesToShow: 2, 
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2, // Show 2 cards per row
+          slidesToShow: 2, 
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -152,7 +152,7 @@ const Teams = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1, // For smaller screens, show 1 card
+          slidesToShow: 1, 
           slidesToScroll: 1,
         },
       },
@@ -163,7 +163,6 @@ const Teams = () => {
     <div className="min-h-screen relative">
       <AnimatedBackground />
       <div className="relative z-10 p-12">
-        {/* Updated Heading Section */}
         <div className="mb-6 sm:mb-8 relative">
           <div
             className="inline-block px-6 sm:px-8 py-4 text-xl sm:text-2xl font-semibold text-[#9f6bff] bg-[#1a4d1a] relative"
@@ -217,8 +216,8 @@ const Teams = () => {
           ))}
         </div>
 
-        {/* Slider with Team Members */}
-        <div className="ml-20"> {/* Increased left margin to move cards towards center */}
+        
+        <div className="ml-20"> 
           <Slider {...sliderSettings}>
             {teamData[activeTab].map((member, index) => (
               <div key={index}>
