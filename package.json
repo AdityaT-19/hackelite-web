@@ -13,10 +13,16 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@tsparticles/engine": "^3.5.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.5.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.17",
     "gh-pages": "^6.2.0",
     "hackelite-web": "file:",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
