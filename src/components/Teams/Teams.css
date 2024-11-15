@@ -1,0 +1,229 @@
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+  100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.2); }
+}
+
+.glow-effect {
+  animation: glow 2s infinite;
+}
+
+/* Set background to solid black */
+.grid-background, .bg-diamond-pattern {
+  background-color: #000; /* Solid black background */
+}
+
+.card-hover {
+  transition: transform 0.3s ease-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(100px, 100px) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes drift-slow {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-100px, 100px) rotate(-180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-360deg);
+  }
+}
+
+@keyframes drift-slower {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(50px, -100px) rotate(90deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes pulse-fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-drift {
+  animation: drift 2s infinite linear;
+}
+
+.animate-drift-slow {
+  animation: drift-slow 2s infinite linear;
+}
+
+.animate-drift-slower {
+  animation: drift-slower 3s infinite linear;
+}
+
+.animate-pulse-fade {
+  animation: pulse-fade 3s infinite ease-in-out;
+}
+
+.card-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Ensures the dots are positioned at the left */
+.slick-dots {
+  position: absolute;
+  left: 0px;  /* Keeps it to the left */
+  bottom: 10px; /* Adjusts the positioning vertically */
+  padding: 0;
+  list-style: none;
+}
+
+.slick-dots li button {
+  background-color: transparent; 
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 50px;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #58FF16; /* Active dot color */
+}
+/* Slider Styles */
+.slick-slider {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+/* Navigation Dots */
+.slick-dots {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  padding: 0;
+  list-style: none;
+  display: flex !important;
+  gap: 2rem;
+}
+
+.slick-dots li {
+  margin: 0;
+}
+
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(88, 255, 22, 0.2);
+  border: 2px solid rgba(88, 255, 22, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #58FF16;
+  border-color: #58FF16;
+  transform: scale(1.2);
+}
+
+/* Navigation Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(88, 255, 22, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(88, 255, 22, 0.4);
+}
+
+/* Background Styles */
+.grid-background,
+.bg-diamond-pattern {
+  background-color: #000;
+}
+
+/* Custom Grid Pattern */
+.bg-diamond-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(88, 255, 22, 0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(88, 255, 22, 0.1) 25%, transparent 25%);
+  background-size: 40px 40px;
+  opacity: 0.1;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* Two cards per row */
+  gap: 20px;  /* Space between cards */
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 900px;  /* You can adjust this based on the screen size */
+}
+
+/* Slanted bottom border */
+.team-member-card .slanted-bottom-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: #38A300;
+  clip-path: polygon(0% 15%, 40% 0%, 100% 0%, 100% 85%, 60% 100%, 0% 100%);
+}
+
+/* Right border */
+.team-member-card .right-border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #38A300;
+}
+
+/* Slanted card background with border */
+.team-member-card .card-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  background-color: rgba(88, 255, 22, 0.13);  /* Light green */
+  clip-path: polygon(0% 15%, 40% 0%, 100% 0%, 100% 85%, 60% 100%, 0% 100%);
+}
+
