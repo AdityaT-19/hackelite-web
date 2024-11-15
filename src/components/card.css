@@ -98,10 +98,12 @@
   align-items: center;
 }
 
+/* Make the image responsive with flexible size */
 .image {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
+  width: 100%; /* The image takes up the full width of the container */
+  height: auto; /* The height will adjust proportionally */
+  max-width: 500px; /* Maximum width to avoid the image becoming too large */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
 /* Responsive Styles */
@@ -115,7 +117,7 @@
   }
 
   .image-container {
-    max-width: 250px;
+    max-width: 200px; /* Adjust the max-width for small screens */
   }
 
   .content-container {
@@ -136,7 +138,7 @@
   }
 
   .image-container {
-    max-width: 400px;
+    max-width: 400px; /* Adjust the max-width for tablet screens */
   }
 
   .content-container {
@@ -161,7 +163,7 @@
   }
 
   .image-container {
-    max-width: 500px;
+    max-width: 500px; /* Set a max-width for large desktops */
   }
 
   .content-container {
@@ -171,5 +173,16 @@
 
   .title-container {
     font-size: 1.9rem;
+  }
+}
+
+/* For 4k Screens (min-width: 3840px) */
+@media (min-width: 3840px) {
+  .image-container {
+    max-width: 600px; /* Adjust image size for large screens */
+  }
+
+  .image {
+    max-width: 600px; /* Limit image size for 4k resolution */
   }
 }
