@@ -33,9 +33,9 @@ function Footer() {
                   </div>
                   <div className='flex gap-2'>
                     <a className='hover:scale-125' target="_blank" href="https://www.linkedin.com/company/hackelite-24-jssstu/"> <FaLinkedin></FaLinkedin> </a>
-                    <span className='xl:block hidden text-lg'>Haclite'24 JSSSTU</span> 
+                    <span className='xl:block hidden text-lg'>Hackelite'24 JSSSTU</span> 
                   </div>
-                    <a className='hover:scale-125' target="_blank" href=""> <FaGithub></FaGithub> </a>
+                  
                 </div>
                 <div className='min-h-full font-bold text-lg md:flex hidden justify-center gap-5    flex-col'>
                     <div>
