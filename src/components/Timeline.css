@@ -37,28 +37,7 @@
   -webkit-text-stroke: 4px #C29DFF; /* Add stroke color to text */
   position: absolute;
   z-index: 1; /* Ensure the hollow texts are behind the main title */
-  animation: scroll-title 10s linear infinite; /* Apply animation */
-}
-
-.hollow-text.left {
-  left: -200px; /* Position the left hollow text */
-}
-
-.hollow-text.right {
-  right: -200px; /* Position the right hollow text */
-}
-
-/* Horizontal scroll animation (left to right) */
-@keyframes scroll-title {
-  0% {
-    transform: translateX(-100%); /* Start off to the left of the screen */
-  }
-  50% {
-    transform: translateX(0%); /* Center the text over the main title without interruption */
-  }
-  100% {
-    transform: translateX(100%); /* Move to the right of the screen */
-  }
+  animation: scroll-title 10s ease-in-out infinite; /* Smooth animation */
 }
 
 /* Timeline content styling */
@@ -185,5 +164,24 @@
 
   .timelineclass {
     padding: 0.5rem; /* Reduce padding for very small screens */
+  }
+}
+
+/* Scroll title animation */
+@keyframes scroll-title {
+  0% {
+    transform: translateX(-100%); /* Start off to the left of the screen */
+  }
+  25% {
+    transform: translateX(-50%); /* Move halfway to the center */
+  }
+  50% {
+    transform: translateX(0%); /* Center the text behind the main title */
+  }
+  75% {
+    transform: translateX(50%); /* Move halfway to the right */
+  }
+  100% {
+    transform: translateX(100%); /* Move completely off to the right */
   }
 }
