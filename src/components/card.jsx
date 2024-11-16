@@ -1,6 +1,6 @@
 // src/components/Card.js
 import React, { forwardRef } from 'react';
-import './Card.css'; // Import component-specific CSS
+import './card.css'; // Import component-specific CSS
 
 const Card = forwardRef(({ title, image, search_url, content }, ref) => {
   return (
