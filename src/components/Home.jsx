@@ -7,23 +7,25 @@ import CountdownTimer from "./CountdownTimer";
 function Home() {
   return (
     <>
-      {/* Canvas Background */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10 ">
-        <div className="absolute flex h-[80vh] w-full">
-          <div className="radial-gradient-bg h-full w-full" />
-          <div className="radial-gradient-bg h-full w-full" />
-          <div className="radial-gradient-bg h-full w-full" />
+      <Navbar />
+      <div className="flex flex-col items-center">
+        {/* Canvas Background */}
+        <div className="absolute top-0 left-0 w-full h-full -z-10 ">
+          <div className="absolute flex h-[80vh] w-full">
+            <div className="radial-gradient-bg h-full w-full" />
+            <div className="radial-gradient-bg h-full w-full" />
+            <div className="radial-gradient-bg h-full w-full" />
+          </div>
+
+          <Canvas camera={{ position: [0, 0, 15], fov: 75 }}>
+            <Galaxy />
+          </Canvas>
         </div>
 
-        <Canvas camera={{ position: [0, 0, 15], fov: 75 }}>
-          <Galaxy />
-        </Canvas>
+        {/* Foreground Sections */}
+        <Hero />
+        <CountdownTimer />
       </div>
-
-      {/* Foreground Sections */}
-      <Navbar />
-      <Hero />
-      <CountdownTimer />
     </>
   );
 }

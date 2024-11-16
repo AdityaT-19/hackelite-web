@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`h-18 md:h-14 flex justify-between sticky top-0 z-50`}
+      className={`h-18 md:h-14 flex justify-between sticky top-0 z-50 w-full`}
     >
       <div className="w-[40%] bg-primary-green bg-opacity-[22%] h-full clip-left hidden md:flex backdrop-blur-lg">
         <ul className="flex text-white items-center justify-evenly w-full text-lg max-lg:text-sm pr-[60px] font-semibold">

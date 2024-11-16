@@ -7,7 +7,7 @@ import { words } from "../constants/ui";
 function Hero() {
   return (
     <section
-      className="relative max-xl:flex flex-col items-center justify-center max-xl:gap-10 max-xl:pb-2"
+      className="relative max-xl:flex flex-col items-center justify-center max-xl:gap-10 max-xl:pb-2 w-full"
       style={{ minHeight: "calc(100vh - 3.5rem)" }}
     >
       <div className="flex items-center gap-16 lg:gap-24 flex-col p-4 z-10">

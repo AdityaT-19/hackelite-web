@@ -27,7 +27,7 @@ const CountdownTimer = () => {
           >
             <polygon
               points="10,0 100,0 100,60 90,100 0,100 0,40"
-              fill="rgba(74, 157, 61, 0.8)"
+              fill="rgba(74, 157, 61, 0.22)"
               stroke="#58ff16"
               strokeWidth="1"
             />
