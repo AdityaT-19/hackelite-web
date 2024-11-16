@@ -34,7 +34,7 @@ const teamData = {
       image: "/api/placeholder/240/240"
     },
     {
-      name: "Prashant Kunar Singh",
+      name: "Prashant Kumar Singh",
       role: "Developer",
       image: "/api/placeholder/240/240"
     },
