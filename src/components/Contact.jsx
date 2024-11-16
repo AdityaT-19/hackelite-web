@@ -10,7 +10,7 @@ function Footer() {
   };
 
   return (
-    <div className="bg-faq w-full flex justify-center">
+    <div className="bg-faq mt-2 w-full flex justify-center">
        <div className='sm:w-6/12 w-7/12 flex sm:gap-16  justify-between md:justify-center '>
                 <div className="flex flex-col items-center p-2">
                   <img src="/logo.png" className="sm:w-40 w-28 h-28 sm:h-40" alt="" />
