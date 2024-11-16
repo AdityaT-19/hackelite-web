@@ -14,7 +14,7 @@ function Faq() {
   })
  
   return (
-    <div className="h-full pt-3 bg-black min-h-screen w-full flex flex-col justify-center items-center p-1">
+    <div id='faq' className="h-full pt-3 bg-black min-h-screen w-full flex flex-col justify-center items-center p-1">
       <div className="flex flex-col w-11/12 justify-center items-center">
 
             <div className="text-2xl flex  items-baseline gap-0   w-full justify-between font-bold">
@@ -30,7 +30,6 @@ function Faq() {
             </div>
       </div>
       <br />
-    {/* <Contact></Contact> */}
     </div>
   );
 }
@@ -44,8 +43,8 @@ function Accordion({question,answer}) {
     <div className="flex justify-between border border-[#58ff1638] text-white w-full bg-black mt-5 p-3" >
                 <div className="w-11/12">
                     <p className="text-xl">{question}</p>
-                    <p  className={`transition-all    sm:text-center text-lg mx-2 duration-500 overflow-hidden ${
-                      isOpen ? 'max-h-fit opacity-100 mt-2' : 'max-h-0 opacity-0'
+                    <p  className={`transition-all    text-center text-lg mx-2 duration-500 overflow-hidden ${
+                      isOpen ? 'max-h-fit opacity-100 mt-3' : 'max-h-0 opacity-0'
                     }`}>{answer}</p>
                 </div>
                 <div className="text-3xl cursor-pointer " onClick={()=>{

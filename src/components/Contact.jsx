@@ -1,6 +1,14 @@
 import React from 'react'
 import { FaGithub,FaLinkedin,FaDiscord,FaInstagram } from "react-icons/fa";
 function Footer() {
+
+   const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="bg-faq w-full flex justify-center">
        <div className='sm:w-6/12 w-7/12 flex sm:gap-16  justify-between md:justify-center '>
@@ -17,12 +25,12 @@ function Footer() {
                   </defs>
                   </svg>
                 </div>
-                <div className='w-1/12 min-h-full md:text-xl text-sm  justify-around  text-white items-center  flex flex-col '>
-                    <a href="">Home</a>
-                    <a href="/about">About</a>
-                    <a href="">Themes</a>
-                    <a href="">Teams</a>
-                    <a href="">FAQ</a>
+                <div className='w-1/12 min-h-full md:text-xl text-md  justify-around  text-white items-center  flex flex-col '>
+                    <button onClick={()=>{scrollToSection('nav')}}>Home</button>
+                    <button onClick={()=>{scrollToSection('about')}}>About</button>
+                    <button onClick={()=>{scrollToSection('themes')}}>Themes</button>
+                    <button onClick={()=>{scrollToSection('teams')}}>Teams</button>
+                    <button onClick={()=>{scrollToSection('faq')}}>FAQ</button>
                 </div>
       </div>
       <div className='flex sm:w-6/12 w-5/12 gap-10 items-center  justify-center sm:justify-around'>  
