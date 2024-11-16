@@ -127,7 +127,7 @@ const AnimatedBackground = () => (
   </div>
 );
 
-const Teams = () => {
+function Teams() {
   const [activeTab, setActiveTab] = useState('Core');
   const tabs = ['Core', 'Technical', 'Creative', 'Sponsorship', 'Publicity', 'Outreach'];
 
@@ -159,6 +159,7 @@ const Teams = () => {
   };
 
   return (
+        <div id='teams'>
     <div className="min-h-screen relative">
       <AnimatedBackground />
       <div className="relative z-10 p-12">
@@ -230,6 +231,7 @@ const Teams = () => {
           </Slider>
         </div>
       </div>
+    </div>
     </div>
   );
 };
