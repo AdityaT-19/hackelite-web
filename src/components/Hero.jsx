@@ -25,7 +25,7 @@ function Hero() {
               <TypewriterEffect words={words} />
             </h2>
             <p className="text-purple-heading text-xl font-bold">
-              1st Dec 2024
+              13th-14th Dec 2024
             </p>
           </div>
         </div>
