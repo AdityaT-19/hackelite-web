@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import TeamMember from './TeamMember'; 
-
+import "slick-carousel/slick/slick.css";
+import TeamMember from './TeamMember';
 const teamData = {
   Core: [
     {
@@ -30,18 +29,18 @@ const teamData = {
   ],
   Technical: [
     {
-      name: "Srujan",
-      role: "Technical Coordinator",
-      image: "/api/placeholder/240/240"
-    },
-    {
       name: "Kunwar Yuvraj",
-      role: "Frontend Developer",
+      role: "Developer",
       image: "/api/placeholder/240/240"
     },
     {
       name: "Prashant Kunar Singh",
-      role: "Frontend Developer",
+      role: "Developer",
+      image: "/api/placeholder/240/240"
+    },
+    {
+      name: "Srujan",
+      role: "Technical Coordinator",
       image: "/api/placeholder/240/240"
     },
     {
