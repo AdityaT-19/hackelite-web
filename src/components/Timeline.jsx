@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Timeline.css";
 import timelineElements from "./timelineElements";
 import {
@@ -9,6 +9,9 @@ import "react-vertical-timeline-component/style.min.css";
 
 function Timeline() {
   const particlesRef = useRef([]);
+  const observer = useRef(null);
+  const timelineRef = useRef(null); // Reference for VerticalTimeline
+
   const workIconStyles = { background: "#fff", color: "#fff" };
   const schoolIconStyles = { background: "#fff", color: "#fff" };
 
@@ -19,31 +22,17 @@ function Timeline() {
 
     const particleContainer = document.createElement("div");
     particleContainer.className = "particles-container";
-    particleContainer.style.cssText = `
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    `;
+    particleContainer.style.cssText = `position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;`;;
     timelineContainer.appendChild(particleContainer);
 
-    const numParticles = 200; // Increased number of particles
+    const numParticles = 250; // Increased number of particles
     const baseSpeed = 0.2; // Fixed speed for particle movement
 
     // Create particles
     for (let i = 0; i < numParticles; i++) {
       const particle = document.createElement("div");
       particle.className = "particle";
-      particle.style.cssText = `
-        position: absolute;
-        background-color: rgba(239, 236, 243, 0.7);
-        border-radius: 50%;
-        pointer-events: none;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-      `;
+      particle.style.cssText = `position: absolute; background-color: rgba(239, 236, 243, 0.7); border-radius: 50%; pointer-events: none; transition: background-color 0.35s ease, transform 0.3s ease;`;
 
       const size = Math.random() * 4 + 4; // Random size between 3 and 6px
       particle.style.width = `${size}px`;
@@ -74,7 +63,6 @@ function Timeline() {
       lastTime = timestamp;
 
       particlesRef.current.forEach((particle) => {
-        // Update positions with fixed speed (no delta)
         particle.x += particle.speedX; // Fixed speed
         particle.y += particle.speedY; // Fixed speed
 
@@ -88,22 +76,17 @@ function Timeline() {
         particle.element.style.left = `${particle.x}%`;
         particle.element.style.top = `${particle.y}%`;
 
-        // No longer depending on mouse position for movement
-        // Only mouse proximity for visual effect
+        // Mouse proximity effect
         const rect = particle.element.getBoundingClientRect();
         const particleX = rect.left + rect.width / 2;
         const particleY = rect.top + rect.height / 2;
-        const distance = Math.hypot(
-          window.innerWidth / 2 - particleX,
-          window.innerHeight / 2 - particleY
-        );
+        const distance = Math.hypot(window.innerWidth / 2 - particleX, window.innerHeight / 2 - particleY);
 
-        // Update appearance based on mouse proximity
-        if (distance < 200) {
+        if (distance < 150) {
           particle.element.style.backgroundColor = "#58FF16"; // Green when close to mouse
-          particle.element.style.transform = "scale(2.5)"; // Slightly larger when close
+          particle.element.style.transform = "scale(3.5)"; // Slightly larger when close
         } else {
-          particle.element.style.backgroundColor = "rgba(239, 236, 243, 0.7)"; // Default color
+          particle.element.style.backgroundColor = "#B880FF"; // Default color
           particle.element.style.transform = "scale(1)"; // Normal size
         }
       });
@@ -121,6 +104,39 @@ function Timeline() {
     };
   }, []); // Empty dependency array so this effect runs only once
 
+  // Intersection observer logic to trigger animation every time the element comes into view
+  useEffect(() => {
+    const elements = document.querySelectorAll('.vertical-timeline-element-content');
+    const timelineElement = timelineRef.current;
+
+    const callback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('bounce-in'); // Trigger animation when in view
+        } else {
+          entry.target.classList.remove('bounce-in'); // Reset animation when out of view
+        }
+      });
+    };
+
+    // Observe VerticalTimeline as well as individual timeline elements
+    observer.current = new IntersectionObserver(callback, { threshold: 0.5 });
+
+    if (timelineElement) {
+      observer.current.observe(timelineElement);
+    }
+
+    elements.forEach(element => {
+      observer.current.observe(element);
+    });
+
+    return () => {
+      if (observer.current) {
+        observer.current.disconnect();
+      }
+    };
+  }, []);
+
   return (
     <div className="timelineclass">
       <div className="title-container">
@@ -128,7 +144,7 @@ function Timeline() {
         <h1 className="hollow-text hollow-text-1">Timeline</h1>
         <h1 className="hollow-text hollow-text-2">Timeline</h1>
       </div>
-      <VerticalTimeline>
+      <VerticalTimeline ref={timelineRef} className="vertical-timeline">
         {timelineElements.map((element, index) => {
           let isWorkIcon = element.icon === "work";
           return (
