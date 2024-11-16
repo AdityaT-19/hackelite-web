@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // src/About.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import '../App.css';
@@ -26,6 +27,13 @@ const About = () => {
         });
       },
       { threshold: 0.2 }  // Trigger when 20% of the card is visible
+=======
+function About() {
+    return (
+       <div id='about'>
+        <h1>This is about section</h1>
+       </div>
+>>>>>>> dev
     );
 
     // Observe each card
