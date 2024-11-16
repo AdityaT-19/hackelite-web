@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://hackelite.in",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^9.116.3",
@@ -15,6 +18,8 @@
     "@tabler/icons-react": "^3.22.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.17",
+    "gh-pages": "^6.2.0",
+    "hackelite-web": "file:",
     "react": "^18.3.1",
     "react-countdown": "^2.3.6",
     "react-dom": "^18.3.1",
