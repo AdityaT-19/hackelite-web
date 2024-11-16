@@ -43,13 +43,13 @@ function Accordion({question,answer}) {
     <div  onClick={()=>{ toggleAccordion()}} className="flex justify-between border border-[#58ff1638] text-white cursor-pointer w-full bg-black mt-5 p-3" >
                 <div className="w-full">
                   <div className="flex justify-between">
-                    <p className="text-xl">{question}</p>
+                    <p className={`text-xl ${isOpen ? 'font-bold ' : 'font-normal'}  `}>{question}</p>
                     <div className="text-3xl cursor-pointer ">
                         {!isOpen?<MdOutlineKeyboardArrowDown />:<MdOutlineKeyboardArrowUp />} 
                   </div>
                   </div>
                     <p  className={`transition-all tracking-tighter    text-center text-lg mx-2 duration-500 overflow-hidden ${
-                      isOpen ? 'max-h-fit opacity-100 mt-3 font-bold sm:font-normal' : 'max-h-0 opacity-0'
+                      isOpen ? 'max-h-fit opacity-100 mt-3 ' : 'max-h-0 opacity-0'
                     }`}>{answer}</p>
                 </div>
     </div>
