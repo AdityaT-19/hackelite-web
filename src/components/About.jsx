@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { about } from "../constants/ui";
 
-function About() {
+export default function About() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Change content every 5 seconds
