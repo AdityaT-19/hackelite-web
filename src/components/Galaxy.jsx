@@ -58,7 +58,7 @@ const Galaxy = () => {
 
   // Animation for rotation
   useFrame(() => {
-    galaxyRef.current.rotation.y += 0.005; // Revolve around Y-axis
+    galaxyRef.current.rotation.y += 0.003; // Revolve around Y-axis
   });
 
   return (
