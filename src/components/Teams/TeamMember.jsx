@@ -1,10 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 const TeamMember = ({ name, role, image }) => {
   return (
     <motion.div
-      className="relative w-[320px] h-[400px] mb-16 mx-4"
+      className="relative w-[320px] h-[400px] mb-16 mx-40"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -17,7 +16,6 @@ const TeamMember = ({ name, role, image }) => {
             clipPath: 'polygon(0% 15%, 40% 0%, 100% 0%, 100% 85%, 60% 100%, 0% 100%)', // Polygon shape
           }}
         />
-        
         {/* Slanted Bottom Border Trying */}
         <div
           className="absolute bottom-0 left-0 right-0 h-[10px] bg-[#38A300]"  // Apply bottom border
@@ -33,8 +31,6 @@ const TeamMember = ({ name, role, image }) => {
             alt={name}
             className="w-full h-full object-cover"
           />
-
-          <div className="absolute inset-0 bg-[#1a4d1a] mix-blend-color opacity-40" />
         </div>
       </div>
 
@@ -47,7 +43,7 @@ const TeamMember = ({ name, role, image }) => {
           {name}
         </h3>
         <p
-          className="text-[#FFD700] text-base font-semibold whitespace-nowrap"
+          className="text-[#FFD700] text-2xl font-semibold whitespace-nowrap"
           style={{ fontFamily: 'Montserrat' }}
         >
           {role}

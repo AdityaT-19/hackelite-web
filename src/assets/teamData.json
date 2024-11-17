@@ -1,0 +1,80 @@
+{
+    "Organizer": [
+      {
+        "name": "Aditya T",
+        "role": "Technical Lead",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Mayank Kumar Singh",
+        "role": "Technical Co Lead",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Sankalp",
+        "role": "Event Coordinator Lead",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Aditya Shekhar",
+        "role": "Creative Lead",
+        "image": "/image1.png"
+      }
+    ],
+    "Web": [
+      {
+        "name": "Kunwar Yuvraj",
+        "role": "Developer",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Prashant Kumar Singh",
+        "role": "Developer",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Srujan",
+        "role": "Technical Coordinator",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Vivek B V",
+        "role": "UI/UX Designer",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Chandana",
+        "role": "UI/UX Designer",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Vasudev",
+        "role": "Technical Coordinator",
+        "image": "/image1.png"
+      }
+    ],
+    "Design": [
+      {
+        "name": "Satish",
+        "role": "Creative Director",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Shubham",
+        "role": "Graphic Designer",
+        "image": "/image1.png"
+      }
+    ],
+    "Outreach": [
+      {
+        "name": "Satish",
+        "role": "Creative Director",
+        "image": "/image1.png"
+      },
+      {
+        "name": "Shubham",
+        "role": "Graphic Designer",
+        "image": "/image1.png"
+      }
+    ]
+  }
