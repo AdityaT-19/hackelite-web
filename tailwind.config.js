@@ -17,6 +17,9 @@ export default {
         countdown: "Press Start 2P",
         subhackalite: "Orbitron",
       },
+      screens: {
+        xs: "400px", // Custom breakpoint for 400px
+      },
     },
   },
   plugins: [],

@@ -11,7 +11,7 @@ const CountdownTimer = () => {
       );
     } else {
       return (
-        <div className="relative xl:fixed w-72 sm:w-[30rem] h-20 xl:h-24 xl:right-8 xl:bottom-4 text-white flex xl:px-10 px-4 md:px-6 justify-evenly items-center countdown z-50">
+        <div className="relative xl:fixed w-72 sm:w-[30rem] h-20 xl:h-24 xl:right-8 xl:bottom-4 text-white flex xl:px-10 px-4 md:px-6 justify-evenly items-center countdown z-30">
           <div
             className="absolute top-0 left-0 w-full h-full backdrop-blur-3xl "
             style={{
