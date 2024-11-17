@@ -1,6 +1,6 @@
 function Teams() {
     return (
-        <div>
+        <div id='teams'>
         <h1>This is Teams section</h1>
        </div>
     );

@@ -1,0 +1,16 @@
+/* src/App.css */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: black ;
+    font-family:'Montserrat', sans-serif;
+   
+  }
+  .About_us{
+    font-size: 64px;
+    color:#b880ff;
+    
+  }
