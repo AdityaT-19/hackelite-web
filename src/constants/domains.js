@@ -1,42 +1,42 @@
 export const domains = [
 	{
-		title: "Cybersecurity",
-		icon: "web_dev_svg.svg",
+		title: "Business Product",
+		icon: "business.png",
 		problems: 3,
 		background:
-			"Small and medium-sized businesses (SMBs) are increasingly targeted by cyber threats but often lack resources for comprehensive cybersecurity.",
+			"There are a lot of problems these days for any business regarding productivity and fulfillment of customer service while maintaining some kind of optimization in the operations process.",
 		challenge:
-			"Develop an innovative, affordable cybersecurity solution specifically designed for SMBs.",
+			"Develop innovative solutions or prototypes to solve real business problems leading to improving productivity, the level of customer experience, and operation efficiency.",
 		focusAreas: [
-			"Proactive threat detection.",
-			"Incident response.",
-			"Data protection and privacy.",
+			"Workflow automation and optimization",
+			"Customer services and engagement improvement",
+			"Data-informed decision making",
 		],
 		requirements: [
-			"Easy to deploy and manage, especially for non-technical users.",
-			"Provides real-time insights and alerts for quick action.",
-			"Helps employees recognize and respond to cyber threats effectively.",
+			"User-friendly interface and seamless user experience",
+			"Compatibility with existing business systems",
+			"Scalable to keep up with increasing growth of the business",
 		],
-		goal: "Empower SMBs to protect themselves against cyber threats, reduce risk exposure, and build customer trust through enhanced cybersecurity.",
+		goal: "Empower the businesses to ensure greater productivity with efficient solutions, high customer satisfaction, and streamlined operations.",
 	},
 	{
-		title: "AI-ML",
-		icon: "ai_ml_svg.svg",
+		title: "Social Innovation",
+		icon: "social.png",
 		problems: 3,
 		background:
-			"AI and Machine Learning technologies are rapidly evolving, creating new opportunities and challenges across various industries.",
+			"There are vast social problems in communities globally that impact quality of life and resource usability.",
 		challenge:
-			"Design an AI-powered solution that addresses a specific industry problem while ensuring ethical and responsible AI practices.",
+			"Create important solutions that are not only qualitative but also have value by addressing social issues, improving the quality of people's lives, sustainability, and positive change for communities.",
 		focusAreas: [
-			"Natural Language Processing",
-			"Computer Vision",
-			"Predictive Analytics",
+			"Accessibility to education and resources",
+			"Environmental sustainability and conservation",
+			"Community health and well-being",
 		],
 		requirements: [
-			"Scalable and efficient implementation",
-			"Explainable AI features for transparency",
-			"Integration with existing systems and workflows",
+			"Affordable and easily accessible by a broad range of users",
+			"Promoting long-term positive impact",
+			"Design is team oriented and inclusive",
 		],
-		goal: "Develop an AI solution that significantly improves efficiency, accuracy, or decision-making in a chosen industry while adhering to ethical AI principles.",
+		goal: "Solutions that can positively impact societal well-being, guide good environmental practices, and promote stronger, healthier communities.",
 	},
 ];
