@@ -1,187 +1,240 @@
-/* Card initial hidden state */
-.card-container {
-  opacity: 0;
-  transform: translateY(50px) rotate(5deg); /* Start slightly below and rotated */
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth transitions */
-  will-change: opacity, transform; /* Optimize performance */
-}
-
-/* Card visible state (on scroll down) */
-.card-container.visible {
-  opacity: 1;
-  transform: translateY(0) rotate(0); /* Return to original position with no rotation */
-  animation: card-zoom-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Smooth zoom-in */
-}
-
-/* Card hidden state when leaving the viewport (on scroll up) */
-.card-container.hidden {
-  opacity: 0;
-  transform: translateY(-50px) rotate(-5deg); /* Slide out upwards and rotate */
-  animation: card-zoom-out 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Smooth zoom-out */
-}
-
-@keyframes card-zoom-in {
-  0% {
-    transform: scale(0.9); /* Slightly smaller */
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1); /* Original size */
-    opacity: 1;
-  }
-}
-
-@keyframes card-zoom-out {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.9);
-    opacity: 0.5; /* Fade out smoothly */
-  }
+/* Layout of all cards in a grid */
+.app-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  gap: 16px; /* Space between cards */
+  padding: 16px;
+  box-sizing: border-box;
+  justify-items: center; /* Center the cards for uneven layouts */
 }
 
 /* Card container styles */
 .card-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #58ff16;
-  border-radius: 0px 0px 100px 0px;
-  padding: 12px 16px; /* Reduced top and bottom padding */
-  margin: 16px; /* Reduced margin between cards */
-  max-width: 100%;
-  width: 100%;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 16px;
+  margin: 0;
+  width: 100%; /* Full width for each card */
+  height: auto; /* Flexible height */
   background-color: #58ff1622;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  box-sizing: border-box;
-  min-height: 70vh; /* Adjusted height */
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 84% 100%, 0 100%, 0% 50%);
+  border: 2px solid #58ff16;
+  border-radius: 8px; /* Add subtle rounding for a clean look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for better contrast */
+  overflow: hidden; /* Prevent overflow issues */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover animation */
+  position: relative;
 }
 
-.image-container,
-.content-container {
-  flex: 1;
-  text-align: center;
-  box-sizing: border-box;
+.card-container:hover {
+  transform: translateY(-8px); /* Lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
 }
 
+/* Default animation state */
+.card-container {
+  opacity: 0;
+  transform: translateY(50px); /* Cards start slightly below their final position */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth animation */
+}
+
+/* Animation when in view */
+.animate-in {
+  opacity: 1;
+  transform: translateY(0); /* Move into place */
+}
+
+/* Animation when out of view */
+.animate-out {
+  opacity: 0;
+  transform: translateY(50px); /* Move out of view */
+}
+
+/* Image container */
+.image-container {
+  height: 200px; /* Fixed height for images */
+  overflow: hidden;
+  border-radius: 6px;
+  background: #000; /* Fallback for missing images */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the container without distortion */
+}
+
+/* Content container */
 .content-container {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
   text-align: center;
-  padding: 10px 20px; /* Reduced padding */
+  padding: 16px 20px;
+  box-sizing: border-box;
+  flex: 1;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  max-height: 200px; /* Limit max height for content area */
+  height: auto;
 }
 
+/* Title container */
 .title-container {
-  font-size: 40px;
+  font-size: 1.5rem; /* Adjustable font size */
+  font-weight: 600; /* Make title bold */
   color: #b880ff;
-  margin-bottom: 8px; /* Reduced spacing below title */
+  margin-bottom: 10px;
+  white-space: normal;
+  text-align: center;
+  overflow-wrap: break-word; /* Handle long words gracefully */
 }
 
+/* Button styling */
 .know {
-  margin: 4px;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: 2px solid #58ff16;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.image-container {
-  position: relative;
-  margin: 8px; /* Reduced margin around the image */
-  max-width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.know:hover {
+  background: #58ff16;
+  color: #000;
 }
 
-/* Make the image responsive with flexible size */
-.image {
-  width: 100%;
-  height: auto;
-  max-width: 500px;
-  object-fit: cover;
+.content-container p {
+  margin-bottom: 8px;
+  line-height: 1.5;
 }
 
 /* Responsive Styles */
 
-/* For Small Mobile Devices (max-width: 480px) */
+/* Small devices (max-width: 480px) */
 @media (max-width: 480px) {
+  .app-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 12px;
+  }
+
   .card-container {
-    padding: 8px;
-    margin: 12px; /* Reduced margin for smaller screens */
-    min-height: auto;
+    padding: 12px;
+    height: auto; /* Dynamic height */
   }
 
   .image-container {
-    max-width: 200px; /* Adjust the max-width for small screens */
+    height: 180px; /* Adjusted for smaller devices */
   }
 
   .content-container {
-    font-size: 1.2rem;
-    padding: 8px;
+    font-size: 14px; /* Smaller font for small screens */
+    padding: 12px;
+  }
+
+  .title-container {
+    font-size: 1.3rem; /* Slightly smaller title */
+  }
+
+  .About_us {
+    font-size: 2rem;
+    margin: 16px 10px;
+    padding: 12px;
+  }
+}
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust to fit more cards */
+    gap: 16px;
+  }
+
+  .card-container {
+    padding: 14px;
+  }
+
+  .image-container {
+    height: 200px;
+  }
+
+  .content-container {
+    font-size: 15px;
   }
 
   .title-container {
     font-size: 1.4rem;
   }
+
+  .About_us {
+    font-size: 2.2rem;
+    margin: 20px 15px;
+    padding: 15px;
+  }
 }
 
-/* For Tablets (max-width: 1023px) */
-@media (max-width: 1023px) {
+/* Large devices (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .app-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+  }
+
   .card-container {
-    padding: 10px;
-    margin: 15px;
+    height: auto; /* Flexible height */
+    padding: 20px;
   }
 
   .image-container {
-    max-width: 400px; /* Adjust the max-width for tablet screens */
+    height: 250px; /* Larger image container for desktop */
   }
 
   .content-container {
-    font-size: 1.5rem;
-    padding: 10px;
+    font-size: 16px;
+    max-height: 250px; /* Expand content height */
   }
 
   .title-container {
-    font-size: 1.7rem;
-  }
-}
-
-/* For Large Desktops (min-width: 1280px) */
-@media (min-width: 1280px) {
-  .card-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    margin: 20px; /* Reduced margin for large desktops */
-    max-width: 1300px;
-  }
-
-  .image-container {
-    max-width: 500px; /* Set a max-width for large desktops */
-  }
-
-  .content-container {
     font-size: 1.6rem;
-    padding: 12px;
   }
 
-  .title-container {
-    font-size: 1.9rem;
+  .About_us {
+    font-size: 2.4rem;
+    padding: 20px;
   }
 }
 
-/* For 4k Screens (min-width: 3840px) */
+/* Ultra-large screens (min-width: 3840px) */
 @media (min-width: 3840px) {
-  .image-container {
-    max-width: 600px; /* Adjust image size for large screens */
+  .app-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 24px;
   }
 
-  .image {
-    max-width: 600px; /* Limit image size for 4k resolution */
+  .card-container {
+    height: 400px; /* Fixed height for uniformity */
+    padding: 24px;
+  }
+
+  .image-container {
+    height: 300px; /* Bigger images for large screens */
+  }
+
+  .content-container {
+    font-size: 18px;
+    max-height: 300px;
+  }
+
+  .title-container {
+    font-size: 1.8rem;
+  }
+
+  .About_us {
+    font-size: 3rem;
+    margin: 30px 20px;
+    padding: 30px;
   }
 }

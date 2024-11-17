@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../App.css';
 import data from '../assets/content.json'; // Assuming this contains the data for cards
-import Card from './card'; // Importing Card component
+import Card from './Card'; // Importing Card component
 
 const About = () => {
   const [cards, setCards] = useState([]);
@@ -10,16 +10,16 @@ const About = () => {
   useEffect(() => {
     setCards(data); // Set the card data
 
-    // Create the IntersectionObserver
+    // Create the IntersectionObserver for animations
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible'); // Add 'visible' when card is in view
-            entry.target.classList.remove('hidden'); // Remove 'hidden'
+            entry.target.classList.add('animate-in'); // Add animation class when visible
+            entry.target.classList.remove('animate-out'); // Remove out-of-view class
           } else {
-            entry.target.classList.add('hidden'); // Add 'hidden' when card is out of view
-            entry.target.classList.remove('visible'); // Remove 'visible'
+            entry.target.classList.add('animate-out'); // Add out-of-view class
+            entry.target.classList.remove('animate-in'); // Remove animation class
           }
         });
       },
@@ -35,19 +35,20 @@ const About = () => {
   }, [cards]);
 
   return (
-    <div id="about" className="app-container gap-5">
+    <>
       <h1 className="About_us text-semibold">About Us</h1>
-      {cards.map((card, index) => (
-        <Card
-          key={card.id}
-          ref={(el) => (cardsRef.current[index] = el)} // Attach refs to cards
-          title={card.title}
-          image={card.image}
-          content={card.content}
-          search_url={card.search_url}
-        />
-      ))}
-    </div>
+      <div id="about" className="app-container gap-5">
+        {cards.map((card, index) => (
+          <Card
+            key={card.id}
+            ref={(el) => (cardsRef.current[index] = el)} // Attach refs to cards
+            title={card.title}
+            content={card.content}
+            search_url={card.search_url}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
