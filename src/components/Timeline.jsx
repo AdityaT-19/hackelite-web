@@ -59,7 +59,9 @@ function Timeline() {
               >
                 {element.title}
               </h3>
-              <span style={{ fontSize: "22px", color: "#fff", fontWeight: "bold" }}>
+              <span
+                style={{ fontSize: "22px", color: "#fff", fontWeight: "bold" }}
+              >
                 {element.description}
               </span>
             </VerticalTimelineElement>
