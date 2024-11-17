@@ -64,7 +64,7 @@ function About() {
                   <img src="/about/bottom.svg" alt="" />
                 </div>
               </div>
-              <div className="xs:w-[calc(100%-4rem)] flex flex-col md:flex-row items-center z-10">
+              <div className="md:w-[calc(100%-4rem)] flex flex-col md:flex-row items-center z-10">
                 <img
                   src={about[currentIndex].image}
                   alt="Logo"
