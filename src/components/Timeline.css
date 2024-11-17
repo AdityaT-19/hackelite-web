@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Code:wght@700&family=Fira+Sans+Condensed:wght@900&family=Fira+Sans:wght@500&family=Playfair+Display+SC:wght@700&family=Racing+Sans+One&family=Saira+Stencil+One&display=swap');
 
+
+
+
+
+/* Add these styles to your Timeline.css file */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent particles from interfering with other elements */
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for size/color changes */
+}
+
+/* Ensure the timeline container has a relative position */
+.vertical-timeline {
+  position: relative !important;
+}
+
+/* Ensure timeline elements appear above particles */
+.vertical-timeline-element {
+  position: relative;
+  z-index: 2;
+}
+
+ /* YHA SEEEEE */
 .timelineclass {
   background-image: url('/timeline2.jpg');
   background-size: contain;
@@ -7,6 +39,7 @@
   padding: 2rem;
   overflow: hidden; /* Ensures the scrolling content doesn't overflow out of the container */
 }
+
 
 /* Title container */
 .title-container {
@@ -34,17 +67,26 @@
   font-size: 96px;
   font-family: "Archivo Black", sans-serif;
   color: transparent;
-  -webkit-text-stroke: 4px #C29DFF; /* Add stroke color to text */
+  -webkit-text-stroke: .1rem #C29DFF; /* Add stroke color to text */
   position: absolute;
   z-index: 1; /* Ensure the hollow texts are behind the main title */
-  animation: scroll-title 10s ease-in-out infinite; /* Smooth animation */
+  animation: scroll-title 11s linear infinite; /* Smooth animation */
+}
+
+/* Specific delays for both hollow texts to animate them at different timings */
+.hollow-text-1 {
+  animation-delay: 0s; /* Starts immediately */
+}
+
+.hollow-text-2 {
+  animation-delay: 5s; /* Starts after 5 seconds */
 }
 
 /* Timeline content styling */
 .vertical-timeline-element-content {
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
     0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-  padding: 2em 3em !important;
+  padding: 1em 1.5em !important;
   background-color: #C1A4F1 !important;
   color: #fff;
   border-radius: 10px;
@@ -101,7 +143,7 @@
   }
 
   .vertical-timeline-element-content {
-    padding: 1.5em 2.5em; /* Adjust padding for smaller screens */
+    padding: .5em 1em; /* Adjust padding for smaller screens */
   }
 
   .button {
@@ -115,11 +157,11 @@
 
 @media only screen and (max-width: 768px) {
   .title {
-    font-size: 48px; /* Adjust title size for small screens */
+    font-size: 72px; /* Adjust title size for small screens */
   }
 
   .hollow-text {
-    font-size: 48px; /* Adjust hollow text size for small screens */
+    font-size: 72px; /* Adjust hollow text size for small screens */
   }
 
   h3 {
@@ -128,7 +170,7 @@
   }
 
   .vertical-timeline-element-content {
-    padding: 1.5em 2em; /* Adjust padding for smaller screens */
+    padding: .5em 1em; /* Adjust padding for smaller screens */
   }
 
   .button {
@@ -142,11 +184,11 @@
 
 @media only screen and (max-width: 480px) {
   .title {
-    font-size: 36px; /* Adjust title size for very small screens */
+    font-size: 60px; /* Adjust title size for very small screens */
   }
 
   .hollow-text {
-    font-size: 36px; /* Adjust hollow text size for very small screens */
+    font-size: 60px; /* Adjust hollow text size for very small screens */
   }
 
   h3 {
@@ -155,7 +197,7 @@
   }
 
   .vertical-timeline-element-content {
-    padding: 1em 1.5em; /* Adjust padding for very small screens */
+    padding: .3em .5em; /* Adjust padding for very small screens */
   }
 
   .button {
@@ -170,18 +212,42 @@
 /* Scroll title animation */
 @keyframes scroll-title {
   0% {
-    transform: translateX(-100%); /* Start off to the left of the screen */
+    transform: translateX(-200%); /* Start off to the left of the screen */
   }
   25% {
-    transform: translateX(-50%); /* Move halfway to the center */
+    transform: translateX(-100%); /* Move halfway to the center */
   }
   50% {
     transform: translateX(0%); /* Center the text behind the main title */
   }
   75% {
-    transform: translateX(50%); /* Move halfway to the right */
+    transform: translateX(100%); /* Move halfway to the right */
   }
   100% {
-    transform: translateX(100%); /* Move completely off to the right */
+    transform: translateX(200%); /* Move completely off to the right */
+  }
+}
+
+
+.vertical-timeline-element-content {
+  visibility: hidden;
+}
+
+.vertical-timeline-element-content.bounce-in {
+  visibility: visible;
+  animation: cd-bounce-2 0.6s;
+}
+
+@keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
