@@ -67,7 +67,7 @@
   font-size: 96px;
   font-family: "Archivo Black", sans-serif;
   color: transparent;
-  -webkit-text-stroke: .1rem #C29DFF; /* Add stroke color to text */
+  -webkit-text-stroke: .1rem #c39dff3d; /* Add stroke color to text */
   position: absolute;
   z-index: 1; /* Ensure the hollow texts are behind the main title */
   animation: scroll-title 16s linear infinite; /* Smooth animation */
