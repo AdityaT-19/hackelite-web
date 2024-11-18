@@ -6,22 +6,30 @@ import teamData from "../../assets/teamData.json";
 import TeamMember from "./TeamMember";
 
 function Teams() {
-  const [activeTab, setActiveTab] = useState("Core");
+  const [activeTab, setActiveTab] = useState("Organizer"); // Default to "Organizer"
 
   const tabs = ["Organizer", "Web", "Design", "Sponsorship", "Management", "Outreach"];
 
   const sliderSettings = {
-    dots: true,
-    infinite: false,
+    dots: false, // Disable dots for a cleaner look
+    infinite: true, // Enable infinite scrolling
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 2000, // Set autoplay interval
+    pauseOnHover: true, // Pause autoplay on hover
+    cssEase: "linear", // Smooth scrolling
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          pauseOnHover: true,
+          cssEase: "linear",
         },
       },
       {
@@ -29,6 +37,10 @@ function Teams() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          pauseOnHover: true,
+          cssEase: "linear",
         },
       },
     ],
@@ -41,12 +53,10 @@ function Teams() {
         <div
           className="absolute top-0 left-0 w-full h-full"
           style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-              linear-gradient(to top, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-              linear-gradient(to left, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
-            `,
+            backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                              linear-gradient(to top, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                              linear-gradient(to left, rgba(255, 255, 255, 0.1) 1px, transparent 1px)`,
             backgroundSize: "90px 90px",
             zIndex: -1,
           }}
