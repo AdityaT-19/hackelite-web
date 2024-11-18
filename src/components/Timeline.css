@@ -67,19 +67,53 @@
   font-size: 96px;
   font-family: "Archivo Black", sans-serif;
   color: transparent;
-  -webkit-text-stroke: .1rem #C29DFF; /* Add stroke color to text */
+  -webkit-text-stroke: .1rem #c39dff3d; /* Add stroke color to text */
   position: absolute;
   z-index: 1; /* Ensure the hollow texts are behind the main title */
-  animation: scroll-title 11s linear infinite; /* Smooth animation */
+  animation: scroll-title 16s linear infinite; /* Smooth animation */
+}
+
+/* Specific delays for both hollow texts to animate them at different timings */
+.hollow-text-0 {
+  animation-delay: 0s; /* Starts immediately */
 }
 
 /* Specific delays for both hollow texts to animate them at different timings */
 .hollow-text-1 {
-  animation-delay: 0s; /* Starts immediately */
+  animation-delay: 4s; /* Starts immediately */
 }
 
 .hollow-text-2 {
-  animation-delay: 5s; /* Starts after 5 seconds */
+  animation-delay: 8s; /* Starts after 5 seconds */
+}
+
+.hollow-text-3 {
+  animation-delay: 12s; /* Starts after 5 seconds */
+}
+
+.hollow-text-4 {
+  animation-delay: 16s; /* Starts after 5 seconds */
+}
+
+
+
+/* Scroll title animation */
+@keyframes scroll-title {
+  0% {
+    transform: translateX(-200%); /* Start off to the left of the screen */
+  }
+  25% {
+    transform: translateX(-100%); /* Move halfway to the center */
+  }
+  50% {
+    transform: translateX(0%); /* Center the text behind the main title */
+  }
+  75% {
+    transform: translateX(100%); /* Move halfway to the right */
+  }
+  100% {
+    transform: translateX(200%); /* Move completely off to the right */
+  }
 }
 
 /* Timeline content styling */
@@ -209,24 +243,6 @@
   }
 }
 
-/* Scroll title animation */
-@keyframes scroll-title {
-  0% {
-    transform: translateX(-200%); /* Start off to the left of the screen */
-  }
-  25% {
-    transform: translateX(-100%); /* Move halfway to the center */
-  }
-  50% {
-    transform: translateX(0%); /* Center the text behind the main title */
-  }
-  75% {
-    transform: translateX(100%); /* Move halfway to the right */
-  }
-  100% {
-    transform: translateX(200%); /* Move completely off to the right */
-  }
-}
 
 
 .vertical-timeline-element-content {
@@ -250,4 +266,34 @@
   100% {
     transform: translateX(0);
   }
+}
+
+:root {
+  --scroll-progress: 0%;
+}
+
+/* Update the timeline line styles */
+
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: .5em !important;
+  background: linear-gradient(to bottom, #9D40FF var(--scroll-progress), #EFECF3 var(--scroll-progress)) !important;
+  transition: background 0.3s linear;
+  border-radius: 100%;
+}
+.vertical-timeline.vertical-timeline--one-column-right::before {
+  right: 18px;
+  left: unset;
+}
+@media only screen and (min-width:1170px) {
+  .vertical-timeline.vertical-timeline--two-columns {
+  width: 90%}
+.vertical-timeline.vertical-timeline--two-columns:before {
+  left: 50%;
+  margin-left: -2px;
+}
 }
