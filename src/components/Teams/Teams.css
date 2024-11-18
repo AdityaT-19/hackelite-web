@@ -167,6 +167,67 @@
   background-color: rgba(88, 255, 22, 0.4);
 }
 
+/* Team Container */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Space inside the container */
+  margin: 0 auto; /* Center container */
+  max-width: 1200px; /* Limit maximum width */
+}
+
+/* Team Member Card */
+.team-member-card {
+  position: relative;
+  background: rgba(88, 255, 22, 0.13); /* Light green background */
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  clip-path: polygon(0% 15%, 40% 0%, 100% 0%, 100% 85%, 60% 100%, 0% 100%);
+}
+
+.team-member-card:hover {
+  transform: translateY(-10px); /* Hover effect */
+  box-shadow: 0 8px 15px rgba(88, 255, 22, 0.2); /* Subtle shadow on hover */
+}
+
+/* Content Alignment */
+.team-member-card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Image Styling */
+.team-member-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+/* Name Styling */
+.team-member-card .name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+/* Role Styling */
+.team-member-card .role {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFDF16; /* Yellow */
+}
+
+
 
 .grid-background,
 .bg-diamond-pattern {
@@ -222,5 +283,29 @@
   height: 320px;
   background-color: rgba(88, 255, 22, 0.13);  /* Light green */
   clip-path: polygon(0% 15%, 40% 0%, 100% 0%, 100% 85%, 60% 100%, 0% 100%);
+}
+
+.center-grid {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: 20px; /* Vertically center the content */
+  min-height: 70vh; /* Ensure the container takes full viewport height */
+}
+
+.grid {
+  max-width: 1200px; /* Optional: Set a max-width for the grid */
+}
+
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.sm\\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 

@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 const TeamMember = ({ name, role, image }) => {
   return (
     <motion.div
-      className="relative w-[320px] h-[400px] mb-16 mx-40"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    className="relative w-full h-[400px] mx-auto"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+  
+  
     >
       {/* Main card with polygon shape */}
       <div className="absolute bottom-0 left-0 right-0 h-[320px]">
