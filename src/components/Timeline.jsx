@@ -137,12 +137,55 @@ function Timeline() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const timeline = document.querySelector('.vertical-timeline');
+      if (!timeline) return;
+      
+      const timelineRect = timeline.getBoundingClientRect();
+      const timelineStart = timelineRect.top;
+      const timelineEnd = timelineRect.bottom;
+      const windowHeight = window.innerHeight;
+      
+      // Calculate the scroll progress
+      let progress;
+      if (timelineStart >= windowHeight) {
+        // Timeline hasn't entered viewport yet
+        progress = 0;
+      } else if (timelineEnd <= 0) {
+        // Timeline has passed viewport completely
+        progress = 100;
+      } else {
+        // Timeline is partially in viewport
+        const totalHeight = timelineEnd - Math.min(timelineStart, windowHeight);
+        const scrolledHeight = windowHeight - timelineStart;
+        progress = (scrolledHeight / totalHeight) * 86;
+        progress = Math.min(100, Math.max(0, progress));
+      }
+  
+      // Update the CSS variable
+      document.documentElement.style.setProperty('--scroll-progress', `${progress}%`);
+    };
+  
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial call to set initial state
+    handleScroll();
+  
+    // Cleanup
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="timelineclass">
       <div className="title-container">
-        <h1 className="title">Timeline</h1>
-        <h1 className="hollow-text hollow-text-1">Timeline</h1>
-        <h1 className="hollow-text hollow-text-2">Timeline</h1>
+        <h1 className="title">&nbsp;TIMELINE&nbsp;</h1>
+        <h1 className="hollow-text hollow-text-0">&nbsp;TIMELINE&nbsp;</h1>
+        <h1 className="hollow-text hollow-text-1">&nbsp;TIMELINE&nbsp;</h1>
+        <h1 className="hollow-text hollow-text-2">&nbsp;TIMELINE&nbsp;</h1>
+        <h1 className="hollow-text hollow-text-3">&nbsp;TIMELINE&nbsp;</h1>
+        <h1 className="hollow-text hollow-text-4">&nbsp;TIMELINE&nbsp;</h1>
       </div>
       <VerticalTimeline ref={timelineRef} className="vertical-timeline">
         {timelineElements.map((element, index) => {
@@ -163,7 +206,7 @@ function Timeline() {
                     justifyContent: "center",
                     alignItems: "center",
                     height: "100%",
-                    fontSize: "4rem",
+                    fontSize: "3rem",
                     fontFamily: "'Racing Sans One', sans-serif",
                     background: "linear-gradient(45deg, #9DFFC4, #000000)",
                     color: "transparent",
@@ -185,9 +228,7 @@ function Timeline() {
               >
                 {element.title}
               </h3>
-              <span
-                style={{ fontSize: "22px", color: "#fff", fontWeight: "bold" }}
-              >
+              <span style={{ fontSize: "22px", color: "#fff", fontWeight: "bold" }}>
                 {element.description}
               </span>
             </VerticalTimelineElement>
