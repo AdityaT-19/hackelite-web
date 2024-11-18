@@ -46,8 +46,23 @@ function Teams() {
         </div>
 
         {/* Team Members Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {teamData[activeTab]?.map((member, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+          {/* First Row: 2 cards */}
+          {teamData[activeTab]?.slice(0, 2).map((member, index) => (
+            <TeamMember
+              key={index}
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              linkedinId={member.linkedinId}
+              description={member.description}
+            />
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {/* Remaining Rows: 3 cards per row */}
+          {teamData[activeTab]?.slice(2).map((member, index) => (
             <TeamMember
               key={index}
               name={member.name}
