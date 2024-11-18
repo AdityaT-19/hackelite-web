@@ -177,6 +177,7 @@
   max-width: 1200px; /* Limit maximum width */
 }
 
+
 /* Team Member Card */
 .team-member-card {
   position: relative;
@@ -309,3 +310,38 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Smooth Transition */
+.group-hover .transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+.group-hover .transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Description Styling */
+.group-hover .description {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
+/* Card Spacing */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* Space between cards */
+  justify-content: center; /* Center-align cards */
+}
+
+/* Responsive width adjustments */
+@media (min-width: 768px) {
+  .team-card {
+    width: 300px;
+  }
+}
+@media (min-width: 1024px) {
+  .team-card {
+    width: 350px;
+  }
+}

@@ -1,15 +1,19 @@
 {
-    "Organizer": [
-      {
-        "name": "Aditya T",
-        "role": "Technical Lead",
-        "image": "/image1.png"
-      },
-      {
-        "name": "Mayank Kumar Singh",
-        "role": "Technical Co Lead",
-        "image": "/image1.png"
-      },
+  "Organizer": [
+    {
+      "name": "Aditya T",
+      "role": "Technical Lead",
+      "image": "/image1.png",
+      "linkedinId": "https://www.linkedin.com/in/adityat",
+      "description": "Experienced Technical Lead specializing in web technologies and team management."
+    },
+    {
+      "name": "Mayank Kumar Singh",
+      "role": "Technical Co Lead",
+      "image": "/image1.png",
+      "linkedinId": "https://www.linkedin.com/in/mayankkumar",
+      "description": "Enthusiastic developer with a passion for creating impactful solutions."
+    },
       {
         "name": "Sankalp",
         "role": "Event Coordinator Lead",

@@ -16,7 +16,7 @@ function Teams() {
             backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
                               linear-gradient(to top, rgba(255, 255, 255, 0.1) 1px, transparent 1px)`,
             backgroundSize: "90px 90px",
-            zIndex: -1,
+            zIndex: -1
           }}
         />
 
@@ -53,6 +53,8 @@ function Teams() {
               name={member.name}
               role={member.role}
               image={member.image}
+              linkedinId={member.linkedinId}
+              description={member.description}
             />
           )) || (
             <p className="text-center text-gray-400 col-span-full">
