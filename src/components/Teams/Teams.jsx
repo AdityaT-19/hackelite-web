@@ -13,7 +13,7 @@ function Teams() {
   const sliderSettings = {
     dots: false, // Disable dots for a cleaner look
     infinite: true, // Enable infinite scrolling
-    speed: 500,
+    speed: 510, // controls the speed
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true, // Enable autoplay
