@@ -39,14 +39,14 @@ export const about = [
     image: "/logo.png",
     search_url: "",
     content:
-      "HackElite '24 is a 24-hour national hackathon hosted by the Developer Student Club and Linux Campus Club at Sri Jayachamarajendra College of Engineering. It brings together students and tech enthusiasts from across India to collaborate, innovate, and solve real-world challenges. Participants will work in teams, leveraging technology to create impactful solutions and connect with like-minded peers.",
+      "HackElite '24 is a 24-hour national hackathon hosted by the Developer Student Club and Linux Campus Club at SJCE. It brings together students and tech enthusiasts from across the country to collaborate, innovate, and solve real-world challenges using technology.",
   },
   {
     title: "ABOUT JSS MAHAVIDYAPEETHA",
     image: "/about/JSS-mahavidhyapita.jpg",
     search_url: "https://jssonline.org/",
     content:
-      " JSS Mahavidyapeetha, established in 2008 in Mysore, Karnataka, is a prominent deemed university recognized under the UGC Act of 1956. Part of a broader educational network, it is dedicated to education, social service, and spirituality. The institution’s Publishing Department significantly contributes to literature and knowledge sharing.",
+      "JSS Mahavidyapeetha, established in 2008 in Mysore, Karnataka, is a deemed university recognized under the UGC Act of 1956. It focuses on education, social service, and spirituality, with its Publishing Department contributing significantly to literature and knowledge sharing.",
   },
   {
     title: "ABOUT JSSSTU",
