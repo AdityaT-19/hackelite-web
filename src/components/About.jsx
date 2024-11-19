@@ -77,6 +77,17 @@ export default function About() {
                   <p className="text-white text-[12px] text-xs xs:text-sm md:text-md xl:text-lg">
                     {about[currentIndex].content}
                   </p>
+                  {/* Gradient Button */}
+                  <div className="pt-4">
+                  <a href={about[currentIndex].search_url} className="block">
+                    <button className="p-[3px] relative">
+                      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg"></div>
+                      <div className="px-8 py-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+                        Know More
+                      </div>
+                    </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
