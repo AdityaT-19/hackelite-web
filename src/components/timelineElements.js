@@ -1,7 +1,7 @@
 let timelineElements = [
   {
     id: 1,
-    title: "21th November 2024",
+    title: "21st November 2024",
 
     description: "REGISTRATION OPENS",
   },
@@ -32,7 +32,7 @@ let timelineElements = [
   },
   {
     id: 6,
-    title: "5th-8th December 2024",
+    title: "4th-7th December 2024",
 
     description: "PAYMENT PERIOD",
   },

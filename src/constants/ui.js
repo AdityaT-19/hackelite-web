@@ -13,23 +13,18 @@ export const navLink2 = [
 ];
 
 export const words = [
+  //turn Bugs into brilliance
   {
-    text: "Fuel ",
+    text: "Turn",
   },
   {
-    text: "Your ",
+    text: "Bugs",
   },
   {
-    text: "Code ",
+    text: "Into",
   },
   {
-    text: "Ignite ",
-  },
-  {
-    text: "the ",
-  },
-  {
-    text: "Future",
+    text: "Brilliance",
   },
 ];
 
