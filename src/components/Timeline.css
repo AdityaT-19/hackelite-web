@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Code:wght@700&family=Fira+Sans+Condensed:wght@900&family=Fira+Sans:wght@500&family=Playfair+Display+SC:wght@700&family=Racing+Sans+One&family=Saira+Stencil+One&display=swap');
-
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Code:wght@700&family=Fira+Sans+Condensed:wght@900&family=Fira+Sans:wght@500&family=Playfair+Display+SC:wght@700&family=Racing+Sans+One&family=Saira+Stencil+One&display=swap");
 
 /* Add these styles to your Timeline.css file */
+.vertical-timeline {
+  position: relative;
+}
 .particles-container {
   position: absolute;
   top: 0;
@@ -31,15 +30,14 @@
   z-index: 2;
 }
 
- /* YHA SEEEEE */
+/* YHA SEEEEE */
 .timelineclass {
-  background-image: url('/timeline2.jpg');
+  background-image: url("/timeline2.jpg");
   background-size: contain;
   background-position: center;
   padding: 2rem;
   overflow: hidden; /* Ensures the scrolling content doesn't overflow out of the container */
 }
-
 
 /* Title container */
 .title-container {
@@ -55,7 +53,7 @@
 .title {
   font-size: 96px;
   font-family: "Archivo Black", sans-serif;
-  background: linear-gradient(to right, #C29DFF, #FFFFFF);
+  background: linear-gradient(to right, #c29dff, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
@@ -67,7 +65,7 @@
   font-size: 96px;
   font-family: "Archivo Black", sans-serif;
   color: transparent;
-  -webkit-text-stroke: .1rem #c39dff3d; /* Add stroke color to text */
+  -webkit-text-stroke: 0.1rem #c39dff3d; /* Add stroke color to text */
   position: absolute;
   z-index: 1; /* Ensure the hollow texts are behind the main title */
   animation: scroll-title 16s linear infinite; /* Smooth animation */
@@ -95,8 +93,6 @@
   animation-delay: 16s; /* Starts after 5 seconds */
 }
 
-
-
 /* Scroll title animation */
 @keyframes scroll-title {
   0% {
@@ -121,7 +117,7 @@
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
     0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
   padding: 1em 1.5em !important;
-  background-color: #C1A4F1 !important;
+  background-color: #c1a4f1 !important;
   color: #fff;
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -177,7 +173,7 @@
   }
 
   .vertical-timeline-element-content {
-    padding: .5em 1em; /* Adjust padding for smaller screens */
+    padding: 0.5em 1em; /* Adjust padding for smaller screens */
   }
 
   .button {
@@ -204,7 +200,7 @@
   }
 
   .vertical-timeline-element-content {
-    padding: .5em 1em; /* Adjust padding for smaller screens */
+    padding: 0.5em 1em; /* Adjust padding for smaller screens */
   }
 
   .button {
@@ -231,7 +227,7 @@
   }
 
   .vertical-timeline-element-content {
-    padding: .3em .5em; /* Adjust padding for very small screens */
+    padding: 0.3em 0.5em; /* Adjust padding for very small screens */
   }
 
   .button {
@@ -242,8 +238,6 @@
     padding: 0.5rem; /* Reduce padding for very small screens */
   }
 }
-
-
 
 .vertical-timeline-element-content {
   visibility: hidden;
@@ -275,13 +269,17 @@
 /* Update the timeline line styles */
 
 .vertical-timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 18px;
   height: 100%;
-  width: .5em !important;
-  background: linear-gradient(to bottom, #9D40FF var(--scroll-progress), #EFECF3 var(--scroll-progress)) !important;
+  width: 0.5em !important;
+  background: linear-gradient(
+    to bottom,
+    #9d40ff var(--scroll-progress),
+    #efecf3 var(--scroll-progress)
+  ) !important;
   transition: background 0.3s linear;
   border-radius: 100%;
 }
@@ -289,11 +287,12 @@
   right: 18px;
   left: unset;
 }
-@media only screen and (min-width:1170px) {
+@media only screen and (min-width: 1170px) {
   .vertical-timeline.vertical-timeline--two-columns {
-  width: 90%}
-.vertical-timeline.vertical-timeline--two-columns:before {
-  left: 50%;
-  margin-left: -2px;
-}
+    width: 90%;
+  }
+  .vertical-timeline.vertical-timeline--two-columns:before {
+    left: 50%;
+    margin-left: -2px;
+  }
 }
