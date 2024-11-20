@@ -3,8 +3,8 @@ import teamData from "../../assets/teamData.json";
 import TeamMember from "./TeamMember";
 
 function Teams() {
-  const [activeTab, setActiveTab] = useState("Organizer");
-  const tabs = ["Organizer", "Web", "Design", "Sponsorship", "Management", "Outreach"];
+  const [activeTab, setActiveTab] = useState("Technical Core");
+  const tabs = ["Technical Core", "Publicity Core", "Organizational Core", "Faculty Coordinator"];
 
   return (
     <div id="team" className="text-white py-16">
