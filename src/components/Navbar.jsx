@@ -19,13 +19,16 @@ function Navbar() {
   };
 
   return (
-    <nav id="nav" className="h-18 md:h-14 flex justify-between sticky top-0 z-50">
+    <nav
+      id="nav"
+      className="h-18 md:h-14 flex justify-between sticky top-0 z-50"
+    >
       <div className="w-[40%] bg-primary-green bg-opacity-[22%] h-full clip-left hidden md:flex">
         <ul className="flex text-white items-center justify-evenly w-full text-lg max-lg:text-sm pr-[60px] font-semibold">
           {navLink1.map((link, index) => (
             <li
               key={index}
-              className="cursor-pointer"
+              className="cursor-pointer hover:underline"
               onClick={() => handleScroll(link.name.toLowerCase())}
             >
               {link.name}
@@ -39,7 +42,7 @@ function Navbar() {
           {navLink2.map((link, index) => (
             <li
               key={index}
-              className="cursor-pointer"
+              className="cursor-pointer hover:underline"
               onClick={() => handleScroll(link.name.toLowerCase())}
             >
               {link.name}
