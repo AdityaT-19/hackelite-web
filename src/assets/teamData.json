@@ -62,23 +62,30 @@
       "name": "Swaraj Ranjan",
       "role": "Publicity and Documentation Team",
       "image": "/members/swaraj.jpg",
-      "linkedinId": ":https://www.linkedin.com/in/swaraj-ranjan-13687024a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "linkedinId": "https://www.linkedin.com/in/swaraj-ranjan-13687024a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       "description": "Student Coordination Lead @Linux Campus Club"
     },
     {
       "name": "Ananaya G N",
       "role": "Publicity and Documentation Team",
       "image": "/members/ananaya.jpg",
-      "linkedinId": "www.linkedin.com/in/ananya-g-nayak-1b0424258",
+      "linkedinId": "https://www.linkedin.com/in/ananya-g-nayak-1b0424258",
       "description": "Formal UI/UX Designer Graphics Designer @DSC-JSSSTU Creative Team @LCC-JSSSTU Transforming creative ideas into code and pushing the boundaries "
     }
   ],
   "Organizational Core": [
     {
+      "name": "Hrishikesh M S",
+      "role": "Organizational Team",
+      "image": "/members/hrishi.jpg",
+      "linkedinId": "https://www.linkedin.com/in/hrishikesh-m-s-h2003?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "description": "Experienced Technical Lead specializing in web technologies and team management."
+    },
+    {
       "name": "Sankalp Nadiger",
       "role": "Organizational Team",
       "image": "/members/sankalp.jpg",
-      "linkedinId": "www.linkedin.com/in/sankalpnad003",
+      "linkedinId": "https://www.linkedin.com/in/sankalpnad003",
       "description": "He is everywhere, juggling multiple clubs like a pro. He's a valuable addition, always up for a challenge."
     },
     {
@@ -87,13 +94,6 @@
       "image": "/members/satish.jpg",
       "linkedinId": "https://www.linkedin.com/in/satish-naik-071095205?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       "description": "Tech-savvy Speaker."
-    },
-    {
-      "name": "Hrishikesh M S",
-      "role": "Organizational Team",
-      "image": "/members/hrishi.jpg",
-      "linkedinId": "https://www.linkedin.com/in/hrishikesh-m-s-h2003?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      "description": "Experienced Technical Lead specializing in web technologies and team management."
     },
     {
       "name": "Fawzan Aftab",
@@ -144,7 +144,7 @@
       "name": "Divya H N",
       "role": "Faculty Coordinator",
       "image": "/members/divya.jpg",
-      "linkedinId": "linkedin.com/in/divya-h-n-441a4026",
+      "linkedinId": "https://linkedin.com/in/divya-h-n-441a4026",
       "description": "A Professional with exposure in various domains and willing to share knowledge to our next generation. "
     }
   ]
