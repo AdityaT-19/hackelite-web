@@ -7,7 +7,7 @@ function Teams() {
   const tabs = ["Organizer", "Web", "Design", "Sponsorship", "Management", "Outreach"];
 
   return (
-    <div id="teams" className="text-white py-16">
+    <div id="team" className="text-white py-16">
       <div className="container mx-auto px-4 relative">
         {/* Background Pattern */}
         <div

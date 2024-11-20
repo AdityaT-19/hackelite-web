@@ -178,7 +178,7 @@ function Timeline() {
   }, []);
 
   return (
-    <div className="timelineclass">
+    <div className="timelineclass" id="timeline">
       <div className="title-container">
         <h1 className="title">&nbsp;TIMELINE&nbsp;</h1>
         <h1 className="hollow-text hollow-text-0">&nbsp;TIMELINE&nbsp;</h1>
