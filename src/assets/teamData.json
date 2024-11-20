@@ -3,14 +3,14 @@
     {
       "name": "Aditya T",
       "role": "Technical Team",
-      "image": "../../public/members/adi.jpg",
+      "image": "/members/adi.jpg",
       "linkedinId": "https://www.linkedin.com/in/aditya-t-723009167",
       "description": "It's Me. Adi "
     },
     {
       "name": "Mayank Kumar Singh",
       "role": "Technical Team",
-      "image": "./../public/members/mayank.jpg",
+      "image": "/members/mayank.jpg",
       "linkedinId": "https://www.linkedin.com/in/mayank-kumar-singh-382671247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       "description": "I am a Technical Coordinator at Linux Campus Club, trying to contribute my best in the technical field "
     },

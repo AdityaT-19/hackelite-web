@@ -33,14 +33,14 @@ const Sponsors = () => {
   const { mainSponsor, coSponsors } = sponsorsData;
 
   return (
-    <div className="relative bg-black pt-10 pb-36">
+    <div className="relative bg-black pt-10 pb-36"id="sponsors">
       {/* Green Border */}
       <div className="absolute inset-0 border-2 rounded-br-[100px] rounded-tl-[100px] border-[#4A9D3C] m-4"></div>
 
       {/* Sponsors Label - Centered with vertical line */}
       <div className="absolute left-0 top-1/2 transform -translate-y-1/2 flex items-center z-20">
         <h2
-          className="text-[#B880FF] font-semibold transform -rotate-90 whitespace-nowrap font-montserrat text-5xl sm:text-6xl md:text-7xl"
+          className="text-[#B880FF] font-semibold transform -rotate-90 whitespace-nowrap font-montserrat text-4xl p-2 sm:text-6xl md:text-7xl"
           style={{
             textShadow: "0 0 1px #4A9D3C, 0 0 2px #4A9D3C",
             marginLeft: "-3rem", // Adjust this value to position the rotated text properly

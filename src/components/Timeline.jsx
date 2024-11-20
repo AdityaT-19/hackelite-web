@@ -106,15 +106,17 @@ function Timeline() {
 
   // Intersection observer logic to trigger animation every time the element comes into view
   useEffect(() => {
-    const elements = document.querySelectorAll('.vertical-timeline-element-content');
+    const elements = document.querySelectorAll(
+      ".vertical-timeline-element-content"
+    );
     const timelineElement = timelineRef.current;
 
     const callback = (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('bounce-in'); // Trigger animation when in view
+          entry.target.classList.add("bounce-in"); // Trigger animation when in view
         } else {
-          entry.target.classList.remove('bounce-in'); // Reset animation when out of view
+          entry.target.classList.remove("bounce-in"); // Reset animation when out of view
         }
       });
     };
@@ -126,7 +128,7 @@ function Timeline() {
       observer.current.observe(timelineElement);
     }
 
-    elements.forEach(element => {
+    elements.forEach((element) => {
       observer.current.observe(element);
     });
 
@@ -139,14 +141,14 @@ function Timeline() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const timeline = document.querySelector('.vertical-timeline');
+      const timeline = document.querySelector(".vertical-timeline");
       if (!timeline) return;
-      
+
       const timelineRect = timeline.getBoundingClientRect();
       const timelineStart = timelineRect.top;
       const timelineEnd = timelineRect.bottom;
       const windowHeight = window.innerHeight;
-      
+
       // Calculate the scroll progress
       let progress;
       if (timelineStart >= windowHeight) {
@@ -162,19 +164,22 @@ function Timeline() {
         progress = (scrolledHeight / totalHeight) * 86;
         progress = Math.min(100, Math.max(0, progress));
       }
-  
+
       // Update the CSS variable
-      document.documentElement.style.setProperty('--scroll-progress', `${progress}%`);
+      document.documentElement.style.setProperty(
+        "--scroll-progress",
+        `${progress}%`
+      );
     };
-  
+
     // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    
+    window.addEventListener("scroll", handleScroll);
+
     // Initial call to set initial state
     handleScroll();
-  
+
     // Cleanup
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -217,8 +222,8 @@ function Timeline() {
                 </div>
               }
             >
-              <h3
-                className="vertical-timeline-element-title text-extrabold"
+              <h4
+                className="vertical-timeline-element-title font-extrabold"
                 style={{
                   fontSize: "24px",
                   color: "#BAE869",
@@ -227,8 +232,8 @@ function Timeline() {
                 }}
               >
                 {element.title}
-              </h3>
-              <span style={{ fontSize: "22px", color: "#fff", fontWeight: "bold" }}>
+              </h4>
+              <span className=" text-white text-mg sm:text-lg font-bold">
                 {element.description}
               </span>
             </VerticalTimelineElement>

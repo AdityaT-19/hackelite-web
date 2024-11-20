@@ -21,8 +21,6 @@ function Hero() {
             />
           </Hover3D>
 
-
-
           <h1 className="font-hackalite font-semibold z-10 text-white text-4xl md:text-6xl lg:text-8xl gradient-text">{`<HACKELITE>`}</h1>
 
           <div className="flex justify-between w-full sm:w-[60vw] max-lg:flex-col p-2 gap-2 max-xl:items-center">
@@ -34,15 +32,16 @@ function Hero() {
             </p>
           </div>
         </div>
-        <button
-          className="bg-[#b880df] h-16 sm:w-96 w-64 text-xl sm:text-3xl font-semibold text-white"
+        <a
+          href="https://unstop.com/o/vFHyfKr?lb=xisUOuLu&utm_medium=Share&utm_source=shortUrl"
+          className="bg-[#b880df] h-16 sm:w-96 w-64 text-xl sm:text-3xl font-semibold text-white text-center flex items-center justify-center"
           style={{
             clipPath:
               "polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%)",
           }}
         >
           Register Now!
-        </button>
+        </a>
       </div>
       <div
         className="border border-[#4a9d3c] absolute top-4 left-6 w-16 hidden sm:flex flex-col justify-between items-center p-2"
@@ -54,17 +53,14 @@ function Hero() {
             Follow us on
           </p>
           <div className="text-purple-heading p-2 text-3xl flex flex-col gap-3">
-            <a href="">
+            <a href="https://www.instagram.com/hackelite_24/profilecard/?igsh=MWQwOTBlMnljZjlncA==">
               <FiInstagram />
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/company/hackelite-24-jssstu/">
               <FaLinkedin />
             </a>
-            <a href="">
+            <a href="https://github.com/AdityaT-19/hackelite-web">
               <FaGithub />
-            </a>
-            <a href="">
-              <FaDiscord />
             </a>
           </div>
         </div>
