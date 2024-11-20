@@ -6,6 +6,7 @@ import { domains } from "../constants/domains";
 const DomainCard = ({ domain }) => {
 	return (
 		<motion.div
+
 			className="group relative overflow-hidden rounded-lg bg-[#0d290d] p-4 sm:p-6 w-full h-[250px] sm:h-[300px] flex flex-col justify-center items-center cursor-pointer border-t-2 border-l-2 border-green-700"
 			whileHover={{ scale: 1.05 }}
 			whileTap={{ scale: 0.95 }}
@@ -151,7 +152,7 @@ const DomainModal = ({ domain }) => (
 
 const Domains = () => {
 	return (
-		<div className="bg-black p-4 sm:p-6">
+		<div className="bg-black p-4 sm:p-6" id="domains">
 			<div className="relative z-10">
 				<div
 					className="absolute top-14 inset-0 bg-[#0a0a0a]"

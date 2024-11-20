@@ -8,7 +8,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 function Timeline() {
-  const particlesRef = useRef([]);
+  // // const particlesRef = useRef([]);
   const observer = useRef(null);
   const timelineRef = useRef(null); // Reference for VerticalTimeline
 
@@ -16,93 +16,93 @@ function Timeline() {
   const schoolIconStyles = { background: "#fff", color: "#fff" };
 
   // Particle creation and animation effect
-  useEffect(() => {
-    const timelineContainer = document.querySelector(".vertical-timeline");
-    if (!timelineContainer) return;
+  // useEffect(() => {
+  //   const timelineContainer = document.querySelector(".vertical-timeline");
+  //   if (!timelineContainer) return;
 
-    const particleContainer = document.createElement("div");
-    particleContainer.className = "particles-container";
-    particleContainer.style.cssText = `position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;`;;
-    timelineContainer.appendChild(particleContainer);
+  //   const particleContainer = document.createElement("div");
+  //   particleContainer.className = "particles-container";
+  //   particleContainer.style.cssText = `position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;`;;
+  //   timelineContainer.appendChild(particleContainer);
 
-    const numParticles = 250; // Increased number of particles
-    const baseSpeed = 0.2; // Fixed speed for particle movement
+  //   const numParticles = 250; // Increased number of particles
+  //   const baseSpeed = 0.2; // Fixed speed for particle movement
 
-    // Create particles
-    for (let i = 0; i < numParticles; i++) {
-      const particle = document.createElement("div");
-      particle.className = "particle";
-      particle.style.cssText = `position: absolute; background-color: rgba(239, 236, 243, 0.7); border-radius: 50%; pointer-events: none; transition: background-color 0.35s ease, transform 0.3s ease;`;
+  //   // Create particles
+  //   for (let i = 0; i < numParticles; i++) {
+  //     const particle = document.createElement("div");
+  //     particle.className = "particle";
+  //     particle.style.cssText = `position: absolute; background-color: rgba(239, 236, 243, 0.7); border-radius: 50%; pointer-events: none; transition: background-color 0.35s ease, transform 0.3s ease;`;
 
-      const size = Math.random() * 4 + 4; // Random size between 3 and 6px
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
+  //     const size = Math.random() * 4 + 4; // Random size between 3 and 6px
+  //     particle.style.width = `${size}px`;
+  //     particle.style.height = `${size}px`;
 
-      // Set initial positions
-      const x = Math.random() * 100;
-      const y = Math.random() * 100;
-      particle.style.left = `${x}%`;
-      particle.style.top = `${y}%`;
+  //     // Set initial positions
+  //     const x = Math.random() * 100;
+  //     const y = Math.random() * 100;
+  //     particle.style.left = `${x}%`;
+  //     particle.style.top = `${y}%`;
 
-      particleContainer.appendChild(particle);
+  //     particleContainer.appendChild(particle);
 
-      particlesRef.current.push({
-        element: particle,
-        x,
-        y,
-        speedX: (Math.random() - 0.5) * baseSpeed,
-        speedY: (Math.random() - 0.5) * baseSpeed,
-      });
-    }
+  //     particlesRef.current.push({
+  //       element: particle,
+  //       x,
+  //       y,
+  //       speedX: (Math.random() - 0.5) * baseSpeed,
+  //       speedY: (Math.random() - 0.5) * baseSpeed,
+  //     });
+  //   }
 
-    // Animation loop with fixed speed
-    let lastTime = 0;
-    const animate = (timestamp) => {
-      if (!lastTime) lastTime = timestamp;
-      const delta = timestamp - lastTime;
-      lastTime = timestamp;
+  //   // Animation loop with fixed speed
+  //   let lastTime = 0;
+  //   const animate = (timestamp) => {
+  //     if (!lastTime) lastTime = timestamp;
+  //     const delta = timestamp - lastTime;
+  //     lastTime = timestamp;
 
-      particlesRef.current.forEach((particle) => {
-        particle.x += particle.speedX; // Fixed speed
-        particle.y += particle.speedY; // Fixed speed
+  //     particlesRef.current.forEach((particle) => {
+  //       particle.x += particle.speedX; // Fixed speed
+  //       particle.y += particle.speedY; // Fixed speed
 
-        // Wrap around edges
-        if (particle.x > 100) particle.x = 0;
-        if (particle.x < 0) particle.x = 100;
-        if (particle.y > 100) particle.y = 0;
-        if (particle.y < 0) particle.y = 100;
+  //       // Wrap around edges
+  //       if (particle.x > 100) particle.x = 0;
+  //       if (particle.x < 0) particle.x = 100;
+  //       if (particle.y > 100) particle.y = 0;
+  //       if (particle.y < 0) particle.y = 100;
 
-        // Apply position
-        particle.element.style.left = `${particle.x}%`;
-        particle.element.style.top = `${particle.y}%`;
+  //       // Apply position
+  //       particle.element.style.left = `${particle.x}%`;
+  //       particle.element.style.top = `${particle.y}%`;
 
-        // Mouse proximity effect
-        const rect = particle.element.getBoundingClientRect();
-        const particleX = rect.left + rect.width / 2;
-        const particleY = rect.top + rect.height / 2;
-        const distance = Math.hypot(window.innerWidth / 2 - particleX, window.innerHeight / 2 - particleY);
+  //       // Mouse proximity effect
+  //       const rect = particle.element.getBoundingClientRect();
+  //       const particleX = rect.left + rect.width / 2;
+  //       const particleY = rect.top + rect.height / 2;
+  //       const distance = Math.hypot(window.innerWidth / 2 - particleX, window.innerHeight / 2 - particleY);
 
-        if (distance < 150) {
-          particle.element.style.backgroundColor = "#58FF16"; // Green when close to mouse
-          particle.element.style.transform = "scale(3.5)"; // Slightly larger when close
-        } else {
-          particle.element.style.backgroundColor = "#B880FF"; // Default color
-          particle.element.style.transform = "scale(1)"; // Normal size
-        }
-      });
+  //       if (distance < 150) {
+  //         particle.element.style.backgroundColor = "#58FF16"; // Green when close to mouse
+  //         particle.element.style.transform = "scale(3.5)"; // Slightly larger when close
+  //       } else {
+  //         particle.element.style.backgroundColor = "#B880FF"; // Default color
+  //         particle.element.style.transform = "scale(1)"; // Normal size
+  //       }
+  //     });
 
-      requestAnimationFrame(animate);
-    };
+  //     requestAnimationFrame(animate);
+  //   };
 
-    requestAnimationFrame(animate);
+  //   requestAnimationFrame(animate);
 
-    return () => {
-      if (particleContainer && timelineContainer) {
-        timelineContainer.removeChild(particleContainer);
-      }
-      particlesRef.current = [];
-    };
-  }, []); // Empty dependency array so this effect runs only once
+  //   return () => {
+  //     if (particleContainer && timelineContainer) {
+  //       timelineContainer.removeChild(particleContainer);
+  //     }
+  //     particlesRef.current = [];
+  //   };
+  // }, []); // Empty dependency array so this effect runs only once
 
   // Intersection observer logic to trigger animation every time the element comes into view
   useEffect(() => {
@@ -178,7 +178,7 @@ function Timeline() {
   }, []);
 
   return (
-    <div className="timelineclass">
+    <div className="timelineclass" id="timeline">
       <div className="title-container">
         <h1 className="title">&nbsp;TIMELINE&nbsp;</h1>
         <h1 className="hollow-text hollow-text-0">&nbsp;TIMELINE&nbsp;</h1>

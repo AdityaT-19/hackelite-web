@@ -9,13 +9,25 @@ function Navbar() {
   // Toggle menu visibility
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
-  return (
+  // Smooth scrolling function
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setMenuOpen(false); // Close the menu after navigation
+    }
+  };
 
-    <nav id='nav' className="h-18 md:h-14 flex justify-between relative">
+  return (
+    <nav id="nav" className="h-18 md:h-14 flex justify-between sticky top-0 z-50">
       <div className="w-[40%] bg-primary-green bg-opacity-[22%] h-full clip-left hidden md:flex">
         <ul className="flex text-white items-center justify-evenly w-full text-lg max-lg:text-sm pr-[60px] font-semibold">
           {navLink1.map((link, index) => (
-            <li key={index} className="cursor-pointer">
+            <li
+              key={index}
+              className="cursor-pointer"
+              onClick={() => handleScroll(link.name.toLowerCase())}
+            >
               {link.name}
             </li>
           ))}
@@ -25,7 +37,11 @@ function Navbar() {
       <div className="w-[40%] bg-primary-green bg-opacity-[22%] h-full clip-right rotate-180 hidden md:flex backdrop-blur-lg">
         <ul className="flex text-white items-center justify-evenly w-full rotate-180 text-lg pl-[60px] max-xl:text-sm font-semibold">
           {navLink2.map((link, index) => (
-            <li key={index} className="cursor-pointer">
+            <li
+              key={index}
+              className="cursor-pointer"
+              onClick={() => handleScroll(link.name.toLowerCase())}
+            >
               {link.name}
             </li>
           ))}
@@ -60,7 +76,11 @@ function Navbar() {
           </button>
           <ul className="w-full flex flex-col items-center gap-4 text-lg max-xl:text-sm font-semibold pb-4">
             {navLink1.concat(navLink2).map((link, index) => (
-              <li key={index} className="cursor-pointer hover:underline">
+              <li
+                key={index}
+                className="cursor-pointer hover:underline"
+                onClick={() => handleScroll(link.name.toLowerCase())}
+              >
                 {link.name}
               </li>
             ))}

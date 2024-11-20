@@ -21,7 +21,7 @@ export default function About() {
   };
 
   return (
-    <div className="w-full justify-center items-center flex md:flex-col md:p-8 h-[700px]">
+    <div id="about" className="w-full justify-center items-center flex md:flex-col md:p-8 h-[700px]">
       <div className="flex flex-col items-center p-4 md:p-8 w-full xl:w-[80vw] justify-evenly h-full">
         <h1 className="text-purple-heading text-2xl md:text-6xl font-semibold md:px-10 py-4 md:py-6">
           About us
