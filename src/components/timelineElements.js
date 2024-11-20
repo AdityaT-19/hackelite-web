@@ -1,7 +1,7 @@
 let timelineElements = [
   {
     id: 1,
-    title: "21th November 2024",
+    title: "21st November 2024",
 
     description: "REGISTRATION OPENS",
   },

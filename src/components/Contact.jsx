@@ -104,7 +104,9 @@ function Footer() {
               {" "}
               <FaLinkedin></FaLinkedin>{" "}
             </a>
-            <span className="xl:block hidden text-lg">Hackelite&apos;24 JSSSTU</span>
+            <span className="xl:block hidden text-lg">
+              HackElite&apos;24 JSSSTU
+            </span>
           </div>
         </div>
         <div className="min-h-full font-bold text-lg md:flex hidden justify-center gap-5    flex-col">
