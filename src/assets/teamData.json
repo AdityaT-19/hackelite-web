@@ -40,37 +40,37 @@
     "Publicity Core": [
       {
         "name": "Shubham Choudhary",
-        "role": "Publicity and Documentation Team",
+        "role": "Publicity Team",
         "image": "./../public/members/shubham.jpg",
         "linkedinId": "https://www.linkedin.com/in/shubham-choudhary-a07081252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        "description": "Dedicated tech enthusiast fostering growth and collaboration as PROGRAM CHAIR @LINUX CAMPUS CLUB, empowering peers through open-source initiatives at JSSSTU."
+        "description": "Dedicated tech enthusiast fostering growth and collaboration as PROGRAM CHAIR @LINUX CAMPUS CLUB."
       },
       {
         "name": "Vinodraj V K",
-        "role": "Publicity and Documentation Team",
+        "role": "Publicity Team",
         "image": "./../public/members/vinodraj.jpg",
         "linkedinId": "https://www.linkedin.com/in/vinodraj-v-k-426884280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         "description": "Young, Innovative, Brilliant, Passionate Human"
       },
       {
         "name": "Aditya Shekhar",
-        "role": "Publicity and Documentation Team",
+        "role": "Publicity Team",
         "image": "./../public/members/aditya.jpg",
-        "linkedinId": "https://www.linkedin.com/in/adityat",
+        "linkedinId": "https://www.linkedin.com/in/aditya-shekhar-662a55311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         "description": "Creative Team Lead at Linux Campus Club"
       },
       {
         "name": "Swaraj Ranjan",
-        "role": "Publicity and Documentation Team",
+        "role": "Publicity Team",
         "image": "./../public/members/swaraj.jpg",
-        "linkedinId": ":https://www.linkedin.com/in/swaraj-ranjan-13687024a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "linkedinId": "https://www.linkedin.com/in/swaraj-ranjan-13687024a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         "description": "Student Coordination Lead @Linux Campus Club"
       },
       {
         "name": "Ananaya G N",
-        "role": "Publicity and Documentation Team",
+        "role": "Publicity Team",
         "image": "./../public/members/ananaya.jpg",
-        "linkedinId": "www.linkedin.com/in/ananya-g-nayak-1b0424258",
+        "linkedinId": "https://www.linkedin.com/in/ananya-g-nayak-1b0424258",
         "description": "Formal UI/UX Designer Graphics Designer @DSC-JSSSTU Creative Team @LCC-JSSSTU Transforming creative ideas into code and pushing the boundaries "
       }
     
@@ -81,7 +81,7 @@
         "name": "Sankalp Nadiger",
         "role": "Organizational Team",
         "image": "./../public/members/sankalp.jpg",
-        "linkedinId": "www.linkedin.com/in/sankalpnad003",
+        "linkedinId": "https://www.linkedin.com/in/sankalpnad003",
         "description": "He is everywhere, juggling multiple clubs like a pro. He's a valuable addition, always up for a challenge."
       },
       {
@@ -134,7 +134,7 @@
         "role": "Faculty Incharge",
         "image": "./../public/members/anil.jpg",
         "linkedinId": "https://www.linkedin.com/in/anilkumarkm?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        "description": "Dean International Engagements and Ranking Professor Department of Computer Science & Engineering JSS Science and Technology University MYSORE"
+        "description": "Dean International Engagements and Ranking Professor Department of Computer Science & Engineering JSSSTU Mysore"
       },
       {
         "name": "Dr. Parashiva Murthy B M",
@@ -148,7 +148,7 @@
         "name": "Divya H N",
         "role": "Faculty Coordinator",
         "image": "./../public/members/divya.jpg",
-        "linkedinId": "linkedin.com/in/divya-h-n-441a4026",
+        "linkedinId": "https://www.linkedin.com/in/divya-h-n-441a4026",
         "description": "A Professional with exposure in various domains and willing to share knowledge to our next generation. "
       }
     ]
