@@ -9,7 +9,6 @@ export const navLink2 = [
   { name: "Team", section: "#team" },
   { name: "Sponsors", section: "#sponsors" },
   { name: "FAQ", section: "#faq" },
-  { name: "Contact us", section: "#contact-us" },
 ];
 
 export const words = [
