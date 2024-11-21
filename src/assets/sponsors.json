@@ -1,0 +1,29 @@
+{
+  "mainSponsor": {
+    "name": "Main Sponsor",
+    "imageUrl": "/siemens.jpg",
+    "websiteUrl": "https://www.siemens.com/in/en.html"
+  },
+  "coSponsors": [
+    {
+      "name": "Co-Sponsor 1",
+      "imageUrl": "/bharatpi.png",
+      "websiteUrl": "https://bharatpi.net/"
+    },
+    {
+      "name": "Co-Sponsor 2",
+      "imageUrl": "/safewheels.png",
+      "websiteUrl": "https://www.safewheelsindia.com/"
+    },
+    {
+      "name": "Co-Sponsor 3",
+      "imageUrl": "/ifimed.png",
+      "websiteUrl": "https://www.ifimed.com/"
+    },
+    {
+      "name": "Co-Sponsor 4",
+      "imageUrl": "/nidhi.jpg",
+      "websiteUrl": "https://nidhiestates.com/"
+    }
+  ]
+}

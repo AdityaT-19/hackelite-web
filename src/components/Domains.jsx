@@ -68,7 +68,7 @@ const DomainPopup = ({ domain }) => {
 			<div className="lg:pl-12">
 				<div className="flex items-center justify-between mb-4 sm:mb-6">
 					<div className="flex items-center gap-2">
-						<h2 className="text-xl sm:text-2xl font-bold text-white">
+						<h2 className="text-xl sm:text-2xl font-bold text-zinc-50 dark:text-white">
 							{domain.title}
 						</h2>
 					</div>
@@ -80,7 +80,7 @@ const DomainPopup = ({ domain }) => {
 							<h3 className="text-[#4ade4a] font-semibold mb-1 text-sm sm:text-base">
 								Background:
 							</h3>
-							<p className="text-xs sm:text-sm">{domain.background}</p>
+							<p className="text-xs sm:text-sm text-zinc-50 dark:text-white">{domain.background}</p>
 						</div>
 					)}
 
@@ -89,7 +89,7 @@ const DomainPopup = ({ domain }) => {
 							<h3 className="text-[#4ade4a] font-semibold mb-1 text-sm sm:text-base">
 								Challenge:
 							</h3>
-							<p className="text-xs sm:text-sm">{domain.challenge}</p>
+							<p className="text-xs sm:text-sm text-zinc-50 dark:text-white">{domain.challenge}</p>
 						</div>
 					)}
 
@@ -100,7 +100,7 @@ const DomainPopup = ({ domain }) => {
 							</h3>
 							<ul className="list-disc list-inside">
 								{domain.focusAreas.map((area, index) => (
-									<li key={index} className="text-xs sm:text-sm">
+									<li key={index} className="text-xs sm:text-sm text-zinc-50 dark:text-white">
 										{area}
 									</li>
 								))}
@@ -115,7 +115,7 @@ const DomainPopup = ({ domain }) => {
 							</h3>
 							<ul className="list-disc list-inside">
 								{domain.requirements.map((req, index) => (
-									<li key={index} className="text-xs sm:text-sm">
+									<li key={index} className="text-xs sm:text-sm text-zinc-50 dark:text-white">
 										{req}
 									</li>
 								))}
@@ -128,7 +128,7 @@ const DomainPopup = ({ domain }) => {
 							<h3 className="text-[#4ade4a] font-semibold mb-1 text-sm sm:text-base">
 								Goal:
 							</h3>
-							<p className="text-xs sm:text-sm">{domain.goal}</p>
+							<p className="text-xs sm:text-sm text-zinc-50">{domain.goal}</p>
 						</div>
 					)}
 				</div>

@@ -38,7 +38,7 @@ const TeamMember = ({ name, role, image, description, linkedinId }) => {
           className="text-[16px] text-white font-normal tracking-wide"
           style={{
             fontFamily: "Montserrat",
-            whiteSpace: "nowrap", // Force name in one line
+            whiteSpace: "wrap", // Force name in one line
             overflow: "visible", // Allow overflow
             textOverflow: "unset", // Don't truncate
           }}

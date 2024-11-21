@@ -1,6 +1,6 @@
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
-function Footer() {
+function Contact() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -9,7 +9,7 @@ function Footer() {
   };
 
   return (
-    <div className="bg-faq mt-2 w-full flex justify-center">
+    <div id="contact-us" className="bg-faq mt-2 w-full flex justify-center">
       <div className="sm:w-6/12 w-7/12 flex sm:gap-16  justify-between md:justify-center ">
         <div className="flex flex-col items-center p-2">
           <img src="/logo.png" className="sm:w-40 w-28 h-28 sm:h-40" alt="" />
@@ -104,7 +104,9 @@ function Footer() {
               {" "}
               <FaLinkedin></FaLinkedin>{" "}
             </a>
-            <span className="xl:block hidden text-lg">Hackelite&apos;24 JSSSTU</span>
+            <span className="xl:block hidden text-lg">
+              HackElite&apos;24 JSSSTU
+            </span>
           </div>
         </div>
         <div className="min-h-full font-bold text-lg md:flex hidden justify-center gap-5    flex-col">
@@ -130,4 +132,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default Contact;

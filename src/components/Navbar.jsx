@@ -28,7 +28,7 @@ function Navbar() {
           {navLink1.map((link, index) => (
             <li
               key={index}
-              className="cursor-pointer"
+              className="cursor-pointer hover:underline"
               onClick={() => handleScroll(link.name.toLowerCase())}
             >
               {link.name}
@@ -42,8 +42,8 @@ function Navbar() {
           {navLink2.map((link, index) => (
             <li
               key={index}
-              className="cursor-pointer"
-              onClick={() => handleScroll(link.name.toLowerCase())}
+              className="cursor-pointer hover:underline"
+              onClick={() => handleScroll(link.section)}
             >
               {link.name}
             </li>
@@ -82,7 +82,7 @@ function Navbar() {
               <li
                 key={index}
                 className="cursor-pointer hover:underline"
-                onClick={() => handleScroll(link.name.toLowerCase())}
+                onClick={() => handleScroll(link.section)}
               >
                 {link.name}
               </li>
