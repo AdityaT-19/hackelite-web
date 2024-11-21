@@ -9,14 +9,17 @@ function Contact() {
   };
 
   return (
-    <div id="contact-us" className="bg-faq mt-2 w-full flex justify-center">
-      <div className="sm:w-6/12 w-7/12 flex sm:gap-16  justify-between md:justify-center ">
+    <div
+      id="contact-us"
+      className="bg-faq mt-2 w-full flex justify-center z-30"
+    >
+      <div className="sm:w-6/12 w-7/12 flex sm:gap-16  justify-between md:justify-center z-30">
         <div className="flex flex-col items-center p-2">
           <img src="/logo.png" className="sm:w-40 w-28 h-28 sm:h-40" alt="" />
           <svg
             width="200"
             height="93"
-            className="w-28 sm:w-40"
+            className="w-28 sm:w-40 z-20"
             viewBox="0 0 846 93"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +86,7 @@ function Contact() {
         </div>
       </div>
       <div className="flex sm:w-6/12 w-5/12 gap-10 items-center  justify-center sm:justify-around">
-        <div className="flex min-h-full text-3xl cursor-pointer text-purple-500  justify-center gap-4 items-center flex-col">
+        <div className="flex min-h-full text-3xl text-purple-500  justify-center gap-4 items-center flex-col">
           <div className="flex gap-2">
             <a
               className="hover:scale-125"
