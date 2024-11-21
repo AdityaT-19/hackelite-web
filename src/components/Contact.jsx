@@ -1,5 +1,21 @@
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
+function GridBackground({ size = "90px", color = "rgba(255, 255, 255, 0.1)" }) {
+  return (
+    <div
+      className="absolute top-0 left-0 w-full h-full"
+      style={{
+        backgroundImage: `
+          linear-gradient(to right, ${color} 1px, transparent 1px), /* Vertical lines */
+          linear-gradient(to bottom, ${color} 1px, transparent 1px) /* Horizontal lines */
+        `,
+        backgroundSize: `${size} ${size}`, // Uniform grid size
+        zIndex: -1,
+      }}
+    />
+  );
+}
+
 function Contact() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -11,9 +27,13 @@ function Contact() {
   return (
     <div
       id="contact-us"
-      className="bg-faq mt-2 w-full flex justify-center z-30"
+      className="bg-faq mt-2 w-full flex justify-center z-30 relative"
     >
-      <div className="sm:w-6/12 w-7/12 flex sm:gap-16  justify-between md:justify-center z-30">
+      {/* Grid background */}
+      <GridBackground size="90px" color="rgba(255, 255, 255, 0.1)" />
+
+      {/* Main content */}
+      <div className="sm:w-6/12 w-7/12 flex sm:gap-16 justify-between md:justify-center z-30">
         <div className="flex flex-col items-center p-2">
           <img src="/logo.png" className="sm:w-40 w-28 h-28 sm:h-40" alt="" />
           <svg
@@ -47,54 +67,26 @@ function Contact() {
             </defs>
           </svg>
         </div>
-        <div className="w-1/12 min-h-full md:text-xl text-md  justify-around  text-white items-center  flex flex-col ">
-          <button
-            onClick={() => {
-              scrollToSection("nav");
-            }}
-          >
-            Home
-          </button>
-          <button
-            onClick={() => {
-              scrollToSection("about");
-            }}
-          >
-            About
-          </button>
-          <button
-            onClick={() => {
-              scrollToSection("themes");
-            }}
-          >
-            Themes
-          </button>
-          <button
-            onClick={() => {
-              scrollToSection("teams");
-            }}
-          >
-            Teams
-          </button>
-          <button
-            onClick={() => {
-              scrollToSection("faq");
-            }}
-          >
-            FAQ
-          </button>
+        <div className="w-1/12 min-h-full md:text-xl text-md justify-around text-white items-center flex flex-col">
+          <button onClick={() => scrollToSection("home")}>Home</button>
+          <button onClick={() => scrollToSection("about")}>About</button>
+          <button onClick={() => scrollToSection("domains")}>Domains</button>
+          <button onClick={() => scrollToSection("team")}>Teams</button>
+          <button onClick={() => scrollToSection("faq")}>FAQ</button>
         </div>
       </div>
-      <div className="flex sm:w-6/12 w-5/12 gap-10 items-center  justify-center sm:justify-around">
-        <div className="flex min-h-full text-3xl text-purple-500  justify-center gap-4 items-center flex-col">
+
+      {/* Social links and contact details */}
+      <div className="flex sm:w-6/12 w-5/12 gap-10 items-center justify-center sm:justify-around">
+        <div className="flex min-h-full text-3xl text-purple-500 justify-center gap-4 items-center flex-col">
           <div className="flex gap-2">
             <a
               className="hover:scale-125"
               target="_blank"
               href="https://www.instagram.com/reel/DCRWptPylSa/?igsh=dm00YnR1OWdjeTNz"
+              rel="noopener noreferrer"
             >
-              {" "}
-              <FaInstagram></FaInstagram>
+              <FaInstagram />
             </a>
             <span className="xl:block hidden text-lg">hackelite_24</span>
           </div>
@@ -103,16 +95,16 @@ function Contact() {
               className="hover:scale-125"
               target="_blank"
               href="https://www.linkedin.com/company/hackelite-24-jssstu/"
+              rel="noopener noreferrer"
             >
-              {" "}
-              <FaLinkedin></FaLinkedin>{" "}
+              <FaLinkedin />
             </a>
             <span className="xl:block hidden text-lg">
               HackElite&apos;24 JSSSTU
             </span>
           </div>
         </div>
-        <div className="min-h-full font-bold text-lg md:flex hidden justify-center gap-5    flex-col">
+        <div className="min-h-full font-bold text-lg md:flex hidden justify-center gap-5 flex-col">
           <div>
             <p className="text-[#9D50FF]">Contact Us</p>
             <span className="text-white">Phone</span>{" "}
@@ -120,7 +112,7 @@ function Contact() {
               +91 9508372431
             </a>
           </div>
-          <p className=" text-[#9D50FF]">
+          <p className="text-[#9D50FF]">
             Email{" "}
             <a
               className="text-white"

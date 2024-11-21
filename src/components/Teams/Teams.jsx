@@ -4,7 +4,14 @@ import TeamMember from "./TeamMember";
 
 function Teams() {
   const [activeTab, setActiveTab] = useState("Technical Core");
+  const [resetState, setResetState] = useState(false);
   const tabs = ["Technical Core", "Publicity Core", "Organizational Core", "Faculty Coordinator"];
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    setResetState(true); // Trigger reset
+    setTimeout(() => setResetState(false), 0); // Reset back after triggering
+  };
 
   return (
     <div id="team" className="text-white py-16">
@@ -38,7 +45,7 @@ function Teams() {
                   ? "border-green-400 text-green-400"
                   : "border-transparent text-gray-400"
               } hover:text-green-400 transition`}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => handleTabChange(tab)}
             >
               {tab}
             </button>
@@ -56,6 +63,7 @@ function Teams() {
               image={member.image}
               linkedinId={member.linkedinId}
               description={member.description}
+              resetState={resetState}
             />
           ))}
         </div>
@@ -70,6 +78,7 @@ function Teams() {
               image={member.image}
               linkedinId={member.linkedinId}
               description={member.description}
+              resetState={resetState}
             />
           )) || (
             <p className="text-center text-gray-400 col-span-full">
