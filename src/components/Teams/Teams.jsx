@@ -1,16 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import teamData from "../../assets/teamData.json";
 import TeamMember from "./TeamMember";
 
 function Teams() {
   const [activeTab, setActiveTab] = useState("Technical Core");
   const [resetState, setResetState] = useState(false);
-  const tabs = ["Technical Core", "Publicity Core", "Organizational Core", "Faculty Coordinator"];
+  const [members, setMembers] = useState(teamData[activeTab]); // New state for members
+  const tabs = [
+    "Technical Core",
+    "Publicity Core",
+    "Organizational Core",
+    "Faculty Coordinator",
+  ];
+
+  // Update members state when activeTab changes
+  useEffect(() => {
+    setResetState(true); // Trigger reset
+    setTimeout(() => setResetState(false), 0); // Reset back
+    setMembers(teamData[activeTab] || []); // Update members
+  }, [activeTab]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    setResetState(true); // Trigger reset
-    setTimeout(() => setResetState(false), 0); // Reset back after triggering
   };
 
   return (
@@ -23,7 +34,7 @@ function Teams() {
             backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
                               linear-gradient(to top, rgba(255, 255, 255, 0.1) 1px, transparent 1px)`,
             backgroundSize: "90px 90px",
-            zIndex: -1
+            zIndex: -1,
           }}
         />
 
@@ -55,7 +66,7 @@ function Teams() {
         {/* Team Members Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {/* First Row: 2 cards */}
-          {teamData[activeTab]?.slice(0, 2).map((member, index) => (
+          {members.slice(0, 2).map((member, index) => (
             <TeamMember
               key={index}
               name={member.name}
@@ -70,17 +81,19 @@ function Teams() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {/* Remaining Rows: 3 cards per row */}
-          {teamData[activeTab]?.slice(2).map((member, index) => (
-            <TeamMember
-              key={index}
-              name={member.name}
-              role={member.role}
-              image={member.image}
-              linkedinId={member.linkedinId}
-              description={member.description}
-              resetState={resetState}
-            />
-          )) || (
+          {members
+            .slice(2)
+            .map((member, index) => (
+              <TeamMember
+                key={index}
+                name={member.name}
+                role={member.role}
+                image={member.image}
+                linkedinId={member.linkedinId}
+                description={member.description}
+                resetState={resetState}
+              />
+            )) || (
             <p className="text-center text-gray-400 col-span-full">
               No members available for this tab.
             </p>
