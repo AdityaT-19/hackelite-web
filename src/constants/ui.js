@@ -33,7 +33,7 @@ export const about = [
     image: "/logo.png",
     search_url: "",
     content:
-      "HackElite '24 is a 24-hour national hackathon hosted by the Developer Student Club and Linux Campus Club at SJCE. It brings together students and tech enthusiasts from across the country to collaborate, innovate, and solve real-world challenges using technology.",
+      "HackElite '24 is a 24-hour national level hackathon hosted by the Department of CSE of JSS Science and Technology University, Mysuru. It brings together students and tech enthusiasts from across the country to collaborate, innovate, and solve real-world challenges using technology.",
   },
   {
     title: "ABOUT JSS MAHAVIDYAPEETHA",

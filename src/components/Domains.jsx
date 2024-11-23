@@ -78,7 +78,7 @@ const DomainPopup = ({ domain }) => {
 						<h3 className="text-[#4ade4a] font-bold mb-1 sm:text-xl text-[.9rem]">
 							• Focus Area: <span className="text-zinc-50 dark:text-white font-semibold">{domain.focusArea}</span>
 						</h3>
-						
+
 					</div>
 					{domain.problems &&
 						domain.problems.map((problem, index) => (
@@ -92,7 +92,19 @@ const DomainPopup = ({ domain }) => {
 							</div>
 						))}
 				</div>
+				<div className="flex justify-end">
+
+				<a 
+				href="/ppt_template.ppt"
+				target="_blank"
+				download
+				className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-stroke-green bg-[linear-gradient(110deg,#000103,45%,#6bc454,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+					PPT Template
+				</a>
+					</div>
+
 			</div>
+
 		</div>
 	);
 };
@@ -113,7 +125,7 @@ const DomainModal = ({ domain }) => (
 const Domains = () => {
 	return (
 		<div className="bg-black p-4 sm:p-6" id="domains">
-			<div className="relative z-10">
+			<div className="relative z-50">
 				<div
 					className="absolute top-14 inset-0 bg-[#0a0a0a]"
 					style={{
