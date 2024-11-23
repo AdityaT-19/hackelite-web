@@ -1,7 +1,8 @@
 export const domains = [
 	{
-		title: "Health",
+		title: "Social Innovation with Healthcare",
 		icon: "health.png",
+		focusArea: "Healthcare",
 		problemsCount: 4,
 		problems: [
 			{
@@ -43,8 +44,9 @@ export const domains = [
 		],
 	},
 	{
-		title: "Smart Infrastructure",
+		title: "Business Product with Smart Infrastructure",
 		icon: "social.png",
+		focusArea: "Smart Infrastructure",
 		problemsCount: 4,
 		problems: [
 			{
@@ -58,10 +60,9 @@ export const domains = [
 					"Design a solution using AI and a single current sensor to monitor and disaggregate energy consumption for each appliance, displayed on a user-friendly web or mobile dashboard.",
 			},
 			{
-				title:
-					"3. Develop an AI-Based Acoustic Wave Monitoring System for Railways",
+				title: "3. Smart Energy Optimization",
 				description:
-					"Build a system that uses AI to analyze acoustic waves for detecting rail defects, predicting rail wear, and assessing rail quality to ensure safety and efficiency.",
+					"Create a smart energy system that dynamically adjusts lighting, monitors human presence density, and regulates temperature by optimizing these parameters to enhance energy efficiency.",
 			},
 			{
 				title:

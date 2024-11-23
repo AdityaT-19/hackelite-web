@@ -33,8 +33,8 @@ const DomainCard = ({ domain }) => {
 				{domain.title}
 			</h3>
 			<p className="text-xs sm:text-sm font-semibold text-[#4ade4a]">
-				{/* Get details */}
-				{domain.problemsCount} Problems
+				Get details
+				{/* {domain.problemsCount} Problems */}
 			</p>
 
 			<div className="absolute -bottom-8 -right-8 sm:-bottom-10 sm:-right-10 w-16 h-16 sm:w-20 sm:h-20 bg-black transform rotate-[45deg] border-l-2 border-green-700" />
@@ -74,6 +74,12 @@ const DomainPopup = ({ domain }) => {
 				</div>
 
 				<div className="space-y-3 sm:space-y-4 text-white/90">
+					<div>
+						<h3 className="text-[#4ade4a] font-bold mb-1 sm:text-xl text-[.9rem]">
+							• Focus Area: <span className="text-zinc-50 dark:text-white font-semibold">{domain.focusArea}</span>
+						</h3>
+						
+					</div>
 					{domain.problems &&
 						domain.problems.map((problem, index) => (
 							<div key={index}>
