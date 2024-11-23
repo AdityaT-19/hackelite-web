@@ -6,7 +6,6 @@ import { domains } from "../constants/domains";
 const DomainCard = ({ domain }) => {
 	return (
 		<motion.div
-
 			className="group relative overflow-hidden rounded-lg bg-[#0d290d] p-4 sm:p-6 w-full h-[250px] sm:h-[300px] flex flex-col justify-center items-center cursor-pointer border-t-2 border-l-2 border-green-700"
 			whileHover={{ scale: 1.05 }}
 			whileTap={{ scale: 0.95 }}
@@ -34,8 +33,8 @@ const DomainCard = ({ domain }) => {
 				{domain.title}
 			</h3>
 			<p className="text-xs sm:text-sm font-semibold text-[#4ade4a]">
-				Get details
-				{/* {domain.problems} Problems */}
+				{/* Get details */}
+				{domain.problemsCount} Problems
 			</p>
 
 			<div className="absolute -bottom-8 -right-8 sm:-bottom-10 sm:-right-10 w-16 h-16 sm:w-20 sm:h-20 bg-black transform rotate-[45deg] border-l-2 border-green-700" />
@@ -69,68 +68,23 @@ const DomainPopup = ({ domain }) => {
 				<div className="flex items-center justify-between mb-4 sm:mb-6">
 					<div className="flex items-center gap-2">
 						<h2 className="text-xl sm:text-2xl font-bold text-zinc-50 dark:text-white">
-							{domain.title}
+							{domain.title} (Problem Statements)
 						</h2>
 					</div>
 				</div>
 
 				<div className="space-y-3 sm:space-y-4 text-white/90">
-					{domain.background && (
-						<div>
-							<h3 className="text-[#4ade4a] font-semibold mb-1 text-sm sm:text-base">
-								Background:
-							</h3>
-							<p className="text-xs sm:text-sm text-zinc-50 dark:text-white">{domain.background}</p>
-						</div>
-					)}
-
-					{domain.challenge && (
-						<div>
-							<h3 className="text-[#4ade4a] font-semibold mb-1 text-sm sm:text-base">
-								Challenge:
-							</h3>
-							<p className="text-xs sm:text-sm text-zinc-50 dark:text-white">{domain.challenge}</p>
-						</div>
-					)}
-
-					{domain.focusAreas && domain.focusAreas.length > 0 && (
-						<div>
-							<h3 className="text-[#4ade4a] font-semibold mb-1 text-sm sm:text-base">
-								Focus Areas:
-							</h3>
-							<ul className="list-disc list-inside">
-								{domain.focusAreas.map((area, index) => (
-									<li key={index} className="text-xs sm:text-sm text-zinc-50 dark:text-white">
-										{area}
-									</li>
-								))}
-							</ul>
-						</div>
-					)}
-
-					{domain.requirements && domain.requirements.length > 0 && (
-						<div>
-							<h3 className="text-[#4ade4a] font-semibold mb-1 text-sm sm:text-base">
-								Requirements:
-							</h3>
-							<ul className="list-disc list-inside">
-								{domain.requirements.map((req, index) => (
-									<li key={index} className="text-xs sm:text-sm text-zinc-50 dark:text-white">
-										{req}
-									</li>
-								))}
-							</ul>
-						</div>
-					)}
-
-					{domain.goal && (
-						<div>
-							<h3 className="text-[#4ade4a] font-semibold mb-1 text-sm sm:text-base">
-								Goal:
-							</h3>
-							<p className="text-xs sm:text-sm text-zinc-50">{domain.goal}</p>
-						</div>
-					)}
+					{domain.problems &&
+						domain.problems.map((problem, index) => (
+							<div key={index}>
+								<h3 className="text-[#4ade4a] font-semibold mb-1 text-sm sm:text-base">
+									{problem.title}
+								</h3>
+								<p className="text-xs sm:text-sm text-zinc-50 dark:text-white">
+									{problem.description}
+								</p>
+							</div>
+						))}
 				</div>
 			</div>
 		</div>
@@ -166,7 +120,7 @@ const Domains = () => {
 				/>
 				<div className="mb-6 sm:mb-8 relative">
 					<h2 className="inline-block bg-[#1a4d1a] px-4 sm:px-6 py-2 text-xl sm:text-2xl font-bold text-[#afafaf]">
-						Domains
+						Themes
 					</h2>
 					<div className="mt-1 h-0.5 w-full bg-[#1a4d1a]" />
 				</div>
@@ -176,7 +130,13 @@ const Domains = () => {
 					whileInView={{
 						opacity: 1,
 						y: 0,
-						transition: { duration: 0.8, staggerChildren: 0.2 },
+						transition: {
+							duration: 0.8,
+							type: "spring", // Use spring for bounce
+							stiffness: 150, // Higher stiffness makes it bouncier
+							damping: 8, // Lower damping makes it more elastic
+							staggerChildren: 0.2,
+						},
 					}}
 					className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-7"
 				>
