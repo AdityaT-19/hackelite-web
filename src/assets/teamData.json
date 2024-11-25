@@ -110,6 +110,65 @@
       "description": " Dr.House of the tech world,love mystery,love cyber"
     }
   ],
+  "Web Team": [
+    {
+      "name": "Kunwar Yuvraj",
+      "role": "Web Developer",
+      "image": "/members/yuvraj.jpg",
+      "linkedinId": "https://www.linkedin.com/in/kunwaryuvraj/",
+      "description": "I use Arch btw ;)"
+    },
+    {
+      "name": "Vasudev D M",
+      "role": "Web Developer",
+      "image": "/members/vasudev.jpg",
+      "linkedinId": "https://www.linkedin.com/in/vasudevshetty/",
+      "description": "Aspiring full stack dev emphasising on backend and devops!"
+    },
+    {
+      "name": "Prashant Kumar Singh",
+      "role": "Web Developer",
+      "image": "/members/prashant.jpg",
+      "linkedinId": "https://www.linkedin.com/in/prashant-singh-239153258",
+      "description": "Computer Science Student with passion for Problem-Solving."
+    },
+    {
+      "name": "Srujan Japthi",
+      "role": "Web Developer",
+      "image": "/members/srujan.jpg",
+      "linkedinId": "https://www.linkedin.com/in/srujan-s-padmashali-a2781225b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "description": "Hi, I'm Srujan, a Tech Coordinator at LCC, enjoy solving DSA problems."
+    },
+
+    {
+      "name": "Vaibhav Kumar K R",
+      "role": "Web Developer",
+      "image": "/members/vaibhav.jpg",
+      "linkedinId": "https://www.linkedin.com/in/vaibhav-kumar-k-r-608643279/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "description": "A web architect, constructing innovative solutions with precision and flair."
+    },
+    {
+      "name": "Prithwi G Hegde",
+      "role": "Web Developer",
+      "image": "/members/prithwi.jpg",
+      "linkedinId": "https://www.linkedin.com/in/prithwi-hegde/",
+      "description": "Hi, I’m a passionate developer and tech enthusiast always looking for new opportunities."
+    },
+    {
+      "name": "Chandana Shree Tulasi M N",
+      "role": "UI/UX Designer",
+      "image": "/members/chandana.jpg",
+      "linkedinId": "https://www.linkedin.com/in/chandana-s-t-m-n-171b26289/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "description": "UI-Designer at DSC" 
+    },
+    {
+      "name": "Vivek B V",
+      "role": "UI/UX Designer",
+      "image": "/members/vivek.jpg",
+      "linkedinId": "https://www.linkedin.com/in/vivekbv2406/",
+      "description": "UI/UX Designer at DSC-JSSSTU Designing seamless journeys where creativity meets purpose!"
+    }
+  ],
   "Faculty Coordinator": [
     {
       "name": "Dr. Srinath S",

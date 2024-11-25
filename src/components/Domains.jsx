@@ -138,7 +138,7 @@ const Domains = () => {
 				/>
 				<div className="mb-6 sm:mb-8 relative">
 					<h2 className="inline-block bg-[#1a4d1a] px-4 sm:px-6 py-2 text-xl sm:text-2xl font-bold text-[#afafaf]">
-						Themes
+						Domains
 					</h2>
 					<div className="mt-1 h-0.5 w-full bg-[#1a4d1a]" />
 				</div>

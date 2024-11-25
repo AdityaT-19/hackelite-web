@@ -10,6 +10,7 @@ function Teams() {
     "Technical Core",
     "Publicity Core",
     "Organizational Core",
+    "Web Team",
     "Faculty Coordinator",
   ];
 

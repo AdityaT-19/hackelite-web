@@ -20,7 +20,7 @@ let timelineElements = [
 
   {
     id: 4,
-    title: "27th November 2024",
+    title: "29th November 2024",
 
     description: "PPT SUBMISSION DEADLINE",
   },
