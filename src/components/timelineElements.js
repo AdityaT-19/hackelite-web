@@ -13,14 +13,14 @@ let timelineElements = [
   },
   {
     id: 3,
-    title: "27th November 2024",
+    title: "29th November 2024",
 
     description: "REGISTRATION CLOSES",
   },
 
   {
     id: 4,
-    title: "29th November 2024",
+    title: "30th November 2024",
 
     description: "PPT SUBMISSION DEADLINE",
   },
