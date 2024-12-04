@@ -3,15 +3,16 @@ import { FiInstagram } from "react-icons/fi";
 import { words } from "../constants/ui";
 import Hover3D from "./Hover3D";
 import { TypewriterEffect } from "./typewriter-effect";
+import Results from "./Results";
 
 function Hero() {
   return (
     <section
-      className="relative max-xl:flex flex-col items-center justify-center max-xl:gap-10 max-xl:pb-2 w-full"
+      className="relative max-xl:flex flex-col items-center justify-center max-xl:gap-7 max-xl:pb-2 w-full"
       style={{ minHeight: "calc(100vh - 3.5rem)" }}
       id="home"
     >
-      <div className="flex items-center gap-16 lg:gap-24 flex-col p-4 z-10">
+      <div className="flex items-center gap-16 lg:gap-24 flex-col p-2 z-10">
         <div className="flex items-center justify-center flex-col">
           <Hover3D>
             <img
@@ -31,17 +32,8 @@ function Hero() {
               13th-14th Dec 2024
             </p>
           </div>
+          <Results />
         </div>
-        <a
-          href="https://unstop.com/o/vFHyfKr?lb=xisUOuLu&utm_medium=Share&utm_source=shortUrl"
-          className="bg-[#b880df] h-16 sm:w-96 w-64 text-xl sm:text-3xl font-semibold text-white text-center flex items-center justify-center"
-          style={{
-            clipPath:
-              "polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%)",
-          }}
-        >
-          Register Now!
-        </a>
       </div>
       <div
         className="border border-[#4a9d3c] absolute top-4 left-6 w-16 hidden sm:flex flex-col justify-between items-center p-2"
