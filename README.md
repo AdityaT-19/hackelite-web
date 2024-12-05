@@ -1,4 +1,4 @@
-# HackElite Website Project
+## HackElite Website Project
 
 This repository contains the source code for the HackElite website project.
 
