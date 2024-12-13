@@ -23,7 +23,6 @@ function Home() {
         </div>
 
         {/* Foreground Sections */}
-        <Hero />
         <CountdownTimer />
       </div>
     </>

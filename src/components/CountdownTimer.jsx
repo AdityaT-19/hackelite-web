@@ -11,7 +11,7 @@ const CountdownTimer = () => {
       );
     } else {
       return (
-        <div className="relative xl:fixed w-72 sm:w-[30rem] h-20 xl:h-24 xl:right-8 xl:bottom-4 text-white flex xl:px-10 px-4 md:px-6 justify-evenly items-center countdown z-20">
+        <div className="xl:fixed w-[80rem] h-64 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white flex xl:px-10 px-4 md:px-6 justify-evenly items-center countdown z-20">
           <div
             className="absolute top-0 left-0 w-full h-full backdrop-blur-3xl "
             style={{
@@ -34,29 +34,29 @@ const CountdownTimer = () => {
           </svg>
           {/* Days */}
           <div className="flex flex-col items-center justify-center gap-2 z-10">
-            <span className="text-[12px] sm:text-lg">Days</span>
-            <span className="text-2xl sm:text-3xl">
+            <span className="text-5xl">Days</span>
+            <span className="text-5xl">
               {String(days).padStart(2, "0")}
             </span>
           </div>
           {/* Hours */}
           <div className="flex flex-col items-center justify-center gap-2 z-10">
-            <span className="text-[12px] sm:text-lg">Hours</span>
-            <span className="text-2xl sm:text-3xl">
+            <span className="text-5xl">Hours</span>
+            <span className="text-5xl">
               {String(hours).padStart(2, "0")}
             </span>
           </div>
           {/* Minutes */}
           <div className="flex flex-col items-center justify-center gap-2 z-10">
-            <span className="text-[12px] sm:text-lg">Mins</span>
-            <span className="text-2xl sm:text-3xl">
+            <span className="text-5xl">Mins</span>
+            <span className="text-5xl">
               {String(minutes).padStart(2, "0")}
             </span>
           </div>
           {/* Seconds */}
           <div className="flex flex-col items-center justify-center gap-2 z-10">
-            <span className="text-[12px] sm:text-lg">Secs</span>
-            <span className="text-2xl sm:text-3xl">
+            <span className="text-5xl">Secs</span>
+            <span className="text-5xl">
               {String(seconds).padStart(2, "0")}
             </span>
           </div>
@@ -66,7 +66,7 @@ const CountdownTimer = () => {
   };
 
   return (
-    <Countdown date={new Date("2024-12-13T00:00:00")} renderer={renderer} />
+    <Countdown date={new Date("2024-12-14T12:00:00")} renderer={renderer} />
   );
 };
 

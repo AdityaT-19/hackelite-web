@@ -1,9 +1,10 @@
-import MainPage from "./pages/MainPage";
+import Home from "./components/Home";
 
 function App() {
   return (
     <>
-      <MainPage />
+      {/* <MainPage /> */}
+      <Home />
     </>
   );
 }
